@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khaled Mohebi — UI/UX Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Khaled Mohebi — UI/UX designer. Selected work, case studies, and contact."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="assets/profile.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="#" aria-label="Home">
+          <span class="logo-circle" aria-hidden="true">KM</span>
+          <span class="logo-text">Khaled&nbsp;Mohebi</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <button
+            id="themeToggle"
+            class="icon-btn"
+            aria-label="Toggle color theme"
+            title="Toggle theme"
+          >
+            <span class="icon-sun" aria-hidden="true"></span>
+            <span class="icon-moon" aria-hidden="false"></span>
+          </button>
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="btn primary" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid hero-grid--bigger-photo">
+          <div class="hero-media big">
+            <img
+              src="assets/profile.jpg"
+              alt="Portrait photo of Khaled Mohebi"
+              loading="eager"
+            />
+          </div>
+          <div class="hero-text">
+            <h1>UI/UX Designer crafting clean, human-centered products.</h1>
+            <p class="lede">
+              I design interfaces, design systems, and end-to-end product
+              experiences. Here’s a small selection of work.
+            </p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#work">See my work</a>
+              <a
+                class="btn ghost"
+                href="https://dribbble.com/KhaledJawan"
+                target="_blank"
+                rel="noopener"
+                >Dribbble</a
+              >
+            </div>
+            <ul class="meta-list" role="list">
+              <li>Based in Trier, Germany</li>
+              <li>Available for freelance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Selected work</h2>
+            <div class="filters">
+              <button class="chip is-active" data-filter="all">All</button>
+              <button class="chip" data-filter="app">App</button>
+              <button class="chip" data-filter="web">Web</button>
+              <button class="chip" data-filter="branding">Branding</button>
+              <button class="chip" data-filter="case">Case Studies</button>
+            </div>
+          </div>
+
+          <div id="workGrid" class="grid"></div>
+
+          <div class="center">
+            <a
+              class="btn ghost"
+              href="https://dribbble.com/KhaledJawan"
+              target="_blank"
+              rel="noopener"
+              >More on Dribbble</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <div>
+            <h2>About Me</h2>
+            <p class="about-paragraph">
+              I’m Khaled Mohebi, a UI/UX designer based in Trier, Germany. I
+              blend product thinking with clean visual systems to ship simple,
+              human‑centered interfaces. I enjoy rapid prototyping, motion, and
+              accessible design that scales into design systems. My process is
+              research‑informed, collaborative with engineers, and measured by
+              outcomes—not outputs. Beyond work, I sketch, photograph, and
+              explore new tech to keep my craft sharp.
+            </p>
+            <ul class="badges" role="list">
+              <li>Design Systems</li>
+              <li>Prototyping</li>
+              <li>Accessibility</li>
+              <li>Motion</li>
+            </ul>
+          </div>
+          <aside class="card contact-card">
+            <h3>Currently</h3>
+            <ul class="list">
+              <li>Freelancing & open to offers</li>
+              <li>Exploring AI-assisted design workflows</li>
+            </ul>
+            <div class="stacked">
+              <a class="btn primary block" href="#contact">Contact me</a>
+              <a
+                class="btn ghost block"
+                href="assets/Khaled_Mohebi_CV.pdf"
+                download
+                >Download CV</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container contact">
+          <h2>Let’s talk</h2>
+          <p class="lede">
+            Got a project in mind? Email me or say hi on socials.
+          </p>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:hello@yourdomain.com"
+              >hello@yourdomain.com</a
+            >
+            <div class="socials" role="list" aria-label="Social links">
+              <a
+                href="https://dribbble.com/KhaledJawan"
+                target="_blank"
+                rel="noopener"
+                aria-label="Dribbble"
+                >Dr</a
+              >
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                >in</a
+              >
+              <a
+                href="https://www.behance.net"
+                target="_blank"
+                rel="noopener"
+                aria-label="Behance"
+                >Be</a
+              >
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="X"
+                >X</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>
+          © <span id="year"></span> Khaled Mohebi. Built with vanilla
+          HTML/CSS/JS.
+        </p>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <template id="workCardTemplate">
+      <article class="card work-card" data-tags="">
+        <a class="thumb" href="#" target="_blank" rel="noopener">
+          <img src="" alt="" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="row">
+            <h3 class="card-title"></h3>
+            <span class="year"></span>
+          </div>
+          <p class="card-meta"></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
