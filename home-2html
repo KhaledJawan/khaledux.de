@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zxx" class="is-animating">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- courtney css -->
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- page name -->
+    <title>Courtney</title>
+
+</head>
+
+<body class="mil-fw-page">
+
+    <!-- wrapper -->
+    <div class="mil-wrapper" id="top">
+
+        <!-- preloader -->
+        <div class="mil-preloader-frame">
+            <div class="mil-preloader-content" style="transform: scale(.6) translateY(200px); opacity: 0;">
+                <div class="mil-preloader">
+                    <div class="mil-circ-1"></div>
+                    <div class="mil-circ-2"></div>
+                    <div class="mil-circ-3"></div>
+                    <div class="mil-circ-4"></div>
+                </div>
+                <div class="mil-upper">Loading</div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+        <div class="mil-frame">
+
+            <!-- top bar -->
+            <div class="mil-top-panel">
+
+                <!-- You need to remove the "mil-dot" class if you don't need a dot -->
+                <a href="home-1.html" class="mil-logo"><span class="mil-dot">C</span></a>
+
+                <div class="mil-navigation">
+                    <nav id="swupMenu" class="mil-menu-transition">
+                        <ul>
+                            <li class="mil-has-children mil-active">
+                                <a href="">Home</a>
+                                <ul>
+                                    <li><a href="home-1.html">Default</a></li>
+                                    <li><a href="home-2.html">Full width homepage</a></li>
+                                    <li><a href="portfolio-5.html">Portfolio slider</a></li>
+                                </ul>
+                            </li>
+                            <li class="mil-has-children">
+                                <a href="">Projects</a>
+                                <ul>
+                                    <li><a href="portfolio-1.html">Projects list</a></li>
+                                    <li><a href="portfolio-2.html">Projects 2 column list</a></li>
+                                    <li><a href="portfolio-3.html">Full width list</a></li>
+                                    <li><a href="portfolio-4.html">Full width simple list</a></li>
+                                    <li><a href="portfolio-5.html">Carousel</a></li>
+                                    <li><a href="project-1.html">Single Project</a></li>
+                                    <li><a href="project-2.html">Full width Single Project</a></li>
+                                </ul>
+                            </li>
+                            <li class="mil-has-children">
+                                <a href="">Blog</a>
+                                <ul>
+                                    <li><a href="blog-1.html">Blog list</a></li>
+                                    <li><a href="blog-2.html">Full width list</a></li>
+                                    <li><a href="publication-1.html">Publication</a></li>
+                                    <li><a href="publication-2.html">Full width Publication</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li class="mil-has-children">
+                                <a href="">Other</a>
+                                <ul>
+                                    <li><a href="story.html">Story timeline</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="service.html">Single Service</a></li>
+                                    <li><a href="404.html">404</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="mil-top-panel-btns">
+                    <a href="contact.html" class="mil-contact-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+
+                    <div class="mil-menu-btn">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- top bar end -->
+
+            <!-- left bar -->
+            <div class="mil-left-panel">
+
+                <div class="mil-page-name mil-upper mil-dark">Homepage</div>
+
+                <ul class="mil-social-icons">
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                </ul>
+
+            </div>
+            <!-- left bar end -->
+
+            <!-- back to top -->
+            <div class="mil-back-to-top">
+                <a href="#top" class="mil-link mil-btt-icon">
+                    <span>Back to top</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+            <!-- back to top end -->
+
+        </div>
+
+        <!-- content -->
+        <div class="mil-content">
+
+            <div class="mil-scroll-wrapper transition-fade" id="swupMain">
+                <div class="mil-container-fw">
+                    <!-- banner -->
+                    <section class="mil-side-banner mil-center">
+                        <div class="mil-banner-top mil-up"></div>
+                        <div class="mil-banner-title">
+                            <div class="mil-upper mil-dark mil-up mil-mb-30">Hello! My name is</div>
+                            <h1 class="mil-up mil-mb-30">Courtney<br>Davis</h1>
+                            <p class="mil-upper mil-dark mil-up">UI/UX Designer</p>
+                        </div>
+                        <div class="mil-up mil-oval-frame">
+                            <div class="mil-circle-text">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
+                                    <defs>
+                                        <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                                    </defs>
+                                    <circle cx="150" cy="100" r="75" fill="none" />
+                                    <g>
+                                        <use xlink:href="#circlePath" fill="none" />
+                                        <text style="letter-spacing: 6.5px">
+                                            <!-- circle text -->
+                                            <textPath xlink:href="#circlePath">Scroll down - Scroll down - </textPath>
+                                        </text>
+                                    </g>
+                                </svg>
+                                <a href="#about" class="mil-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <polyline points="19 12 12 19 5 12"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- banner end -->
+
+                    <!-- about -->
+                    <section id="about" class="mil-p-0-90">
+                        <div class="mil-oval-frame-2 mil-mb-90">
+                            <img src="img/person/avatar.jpg" alt="avatar">
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="mil-center">
+                                    <h2 class="mil-up mil-mb-30">Hi! My name is Courtney, <br>i’m UI/UX Designer based in Toronto</h2>
+                                    <div class="mil-quote mil-up mil-mb-30"><i class="fas fa-quote-left"></i></div>
+                                    <p class="mil-up mil-mb-30">I am a passionate and dedicated UI/UX designer with a strong focus on creating exceptional user experiences. I thrive on transforming complex ideas into intuitive and visually appealing designs. With a keen eye for detail and a user-centered approach, I strive to deliver impactful solutions that engage and delight users. Let's collaborate to bring your digital products to life!</p>
+                                    <img src="img/person/sign.png" alt="signature" class="mil-up mil-sign">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- about end -->
+
+                    <div class="mil-section-title mil-up">
+                        <div class="mil-divider"></div>
+                        <h3>Services</h3>
+                    </div>
+
+                    <!-- services -->
+                    <section class="mil-p-90-30">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4">
+                                <div class="mil-icon-box mil-center mil-mb-60">
+                                    <div class="mil-service-icon mil-up">
+                                        <img src="img/icons/1.svg" alt="icon" class="mil-mb-30">
+                                    </div>
+                                    <h5 class="mil-up mil-mb-30">UI/UX Design</h5>
+                                    <p class="mil-up mil-mb-30">Elevate your online presence with captivating user interfaces and seamless experiences</p>
+                                    <div class="mil-up">
+                                        <a href="service.html" class="mil-link mil-icon-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mil-icon-box mil-center mil-mb-60">
+                                    <div class="mil-service-icon mil-up">
+                                        <img src="img/icons/2.svg" alt="icon" class="mil-mb-30">
+                                    </div>
+                                    <h5 class="mil-up mil-mb-30">Logo Design</h5>
+                                    <p class="mil-up mil-mb-30">Establish a strong and cohesive brand identity that resonates with your audience.</p>
+                                    <div class="mil-up">
+                                        <a href="service.html" class="mil-link mil-icon-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mil-icon-box mil-center mil-mb-60">
+                                    <div class="mil-service-icon mil-up">
+                                        <img src="img/icons/3.svg" alt="icon" class="mil-mb-30">
+                                    </div>
+                                    <h5 class="mil-up mil-mb-30">Branding</h5>
+                                    <p class="mil-up mil-mb-30">All of which have a singular goal: to build environments where our clients thrive.</p>
+                                    <div class="mil-up">
+                                        <a href="service.html" class="mil-link mil-icon-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- services end -->
+
+                    <div class="mil-section-title mil-up">
+                        <div class="mil-divider"></div>
+                        <h3>Language Skills</h3>
+                    </div>
+
+                    <!-- language -->
+                    <section class="mil-lang-skills mil-p-90-60">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-6 col-lg-3">
+
+                                <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
+                                    <div class="mil-circular-progress" data-value="95%">
+                                        <div class="mil-counter-frame mil-upper mil-dark"><span class="mil-counter" data-number="95">0</span><span>%</span></div>
+                                    </div>
+                                    <h6 class="mil-up">English</h6>
+                                </div>
+
+                            </div>
+                            <div class="col-6 col-lg-3">
+
+                                <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
+                                    <div class="mil-circular-progress" data-value="85%">
+                                        <div class="mil-counter-frame mil-upper mil-dark"><span class="mil-counter" data-number="85">0</span><span>%</span></div>
+                                    </div>
+                                    <h6 class="mil-up">French</h6>
+                                </div>
+
+                            </div>
+                            <div class="col-6 col-lg-3">
+
+                                <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
+                                    <div class="mil-circular-progress" data-value="60%">
+                                        <div class="mil-counter-frame mil-upper mil-dark"><span class="mil-counter" data-number="60">0</span><span>%</span></div>
+                                    </div>
+                                    <h6 class="mil-up">Spanish</h6>
+                                </div>
+
+                            </div>
+                            <div class="col-6 col-lg-3">
+
+                                <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
+                                    <div class="mil-circular-progress" data-value="40%">
+                                        <div class="mil-counter-frame mil-upper mil-dark"><span class="mil-counter" data-number="40">0</span><span>%</span></div>
+                                    </div>
+                                    <h6 class="mil-up">German</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- language end -->
+
+                    <div class="mil-section-title mil-up">
+                        <div class="mil-divider"></div>
+                        <h3>Hard Skills</h3>
+                    </div>
+
+                    <!-- hard skills -->
+                    <section class="mil-p-90-60">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6">
+
+                                <div class="mil-lang-skills-item mil-mb-30">
+                                    <h5 class="mil-up mil-mb-30">Figma</h5>
+                                    <div class="mil-line-progress mil-up">
+                                        <div class="mil-bar" data-value="95%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-lang-skills-item mil-mb-30">
+                                    <h5 class="mil-up mil-mb-30">Adobe XD</h5>
+                                    <div class="mil-line-progress mil-up">
+                                        <div class="mil-bar" data-value="90%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-lang-skills-item mil-mb-30">
+                                    <h5 class="mil-up mil-mb-30">Sketch</h5>
+                                    <div class="mil-line-progress mil-up">
+                                        <div class="mil-bar" data-value="80%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-lang-skills-item mil-mb-30">
+                                    <h5 class="mil-up mil-mb-30">Photoshop</h5>
+                                    <div class="mil-line-progress mil-up">
+                                        <div class="mil-bar" data-value="70%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-lang-skills-item mil-mb-30">
+                                    <h5 class="mil-up mil-mb-30">Html</h5>
+                                    <div class="mil-line-progress mil-up">
+                                        <div class="mil-bar" data-value="40%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-lang-skills-item mil-mb-30">
+                                    <h5 class="mil-up mil-mb-30">Css</h5>
+                                    <div class="mil-line-progress mil-up">
+                                        <div class="mil-bar" data-value="40%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </section>
+                    <!-- hard skills end -->
+
+                    <div class="mil-section-title mil-up">
+                        <div class="mil-divider"></div>
+                        <h3>Reviews</h3>
+                    </div>
+
+                    <!-- revievs -->
+                    <section class="mil-p-90-90">
+
+                        <div class="row justify-content-center mil-reviews-slider-frame">
+                            <div class="col-lg-6">
+
+                                <div class="swiper-container mil-reviews-slider mil-mb-30">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+
+                                            <div class="mil-review mil-center" data-swiper-parallax-opacity="0" data-swiper-parallax="-90" data-swiper-parallax-scale=".8">
+                                                <div class="mil-review-top">
+                                                    <img src="img/customers/1.jpg" alt="customer" class="mil-avatar mil-up">
+                                                    <div class="mil-name">
+                                                        <h4 class="mil-up mil-mb-5">Paul Trueman</h4>
+                                                        <p class="mil-upper mil-up">Eqanta app</p>
+                                                    </div>
+                                                </div>
+                                                <p class="mil-up">Working with Courtney Davis as our UI designer was an absolute pleasure. Her attention to detail and creative approach brought our vision to life. The user interface she designed exceeded our expectations, and we received positive feedback from our clients. Highly recommended!</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide">
+
+                                            <div class="mil-review mil-center" data-swiper-parallax-opacity="0" data-swiper-parallax="-90" data-swiper-parallax-scale=".8">
+                                                <div class="mil-review-top">
+                                                    <img src="img/customers/2.jpg" alt="customer" class="mil-avatar mil-up">
+                                                    <div class="mil-name">
+                                                        <h4 class="mil-up mil-mb-5">Olivia Oldman</h4>
+                                                        <p class="mil-upper mil-up">Eqanta app</p>
+                                                    </div>
+                                                </div>
+                                                <p class="mil-up">I had the opportunity to collaborate with Courtney, and I must say she is incredibly talented. Her ability to understand our brand and translate it into a interface was impressive. Courtney's designs were intuitive, and enhanced the overall user experience. I look forward to working with her again!</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide">
+
+                                            <div class="mil-review mil-center" data-swiper-parallax-opacity="0" data-swiper-parallax="-90" data-swiper-parallax-scale=".8">
+                                                <div class="mil-review-top">
+                                                    <img src="img/customers/3.jpg" alt="customer" class="mil-avatar mil-up">
+                                                    <div class="mil-name">
+                                                        <h4 class="mil-up mil-mb-5">Oscar Newman</h4>
+                                                        <p class="mil-upper mil-up">Eqanta app</p>
+                                                    </div>
+                                                </div>
+                                                <p class="mil-up">Courtney Davis is an exceptional UI designer. She has a keen eye for aesthetics and understands how to create interfaces. Courtney's designs greatly improved the usability of our application, and we couldn't be happier with the results. Highly skilled and reliable!</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mil-slider-nav">
+                                <div class="mil-reviews-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="mil-reviews-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="swiper-reviews-pagination mil-up"></div>
+
+                        </div>
+
+                    </section>
+                    <!-- revievs end -->
+
+                    <div class="mil-section-title mil-up">
+                        <div class="mil-divider"></div>
+                        <h3>Latest from blog</h3>
+                    </div>
+
+                    <!-- blog -->
+                    <section class="mil-p-90-30">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6">
+
+                                <a href="publication-2.html" class="mil-blog-card mil-mb-60">
+                                    <div class="mil-cover mil-up">
+                                        <img src="img/blog/1.jpg" alt="cover">
+                                        <div class="mil-link mil-icon-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="mil-descr">
+                                        <h4 class="mil-up mil-mb-30">How to Become a Graphic Designer in 10 Simple Steps</h4>
+                                        <p class="mil-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <a href="publication-2.html" class="mil-blog-card mil-mb-60">
+                                    <div class="mil-cover mil-up">
+                                        <img src="img/blog/2.jpg" alt="cover">
+                                        <div class="mil-link mil-icon-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="mil-descr">
+                                        <h4 class="mil-up mil-mb-30">16 Best Graphic Design Online and Offline Courses</h4>
+                                        <p class="mil-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </section>
+                    <!-- blog end -->
+
+                    <div class="mil-divider mil-up mil-mb-90"></div>
+
+                    <!-- call to action -->
+                    <section class="mil-p-0-90">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="mil-center">
+                                    <h1 class="mil-h1-sm mil-up mil-mb-60">Ready to bring your ideas to life? I'm here to help</h1>
+                                    <div class="mil-up">
+                                        <a href="contact.html" class="mil-btn mil-sm-btn">Contact me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- call to action end -->
+
+                    <!-- footer -->
+                    <footer class="mil-fw">
+                        <p class="mil-light-soft">© 2023. Courtney. All rights reserved.</p>
+                        <p class="mil-light-soft">Author: &nbsp;<a href="https://themeforest.net/user/millerdigitaldesign/portfolio" target="_blank">Nazar Miller</a></p>
+                    </footer>
+                    <!-- footer end -->
+
+                </div>
+
+            </div>
+
+            <div class="mil-right-banner" id="scene">
+                <!-- scrollbar -->
+                <div class="mil-progress-track">
+                    <div class="mil-progress"></div>
+                </div>
+                <!-- scrollbar end -->
+                <div class="mil-banner-wrapper" data-depth="1">
+                    <div id="swupBg" class="mil-banner-frame"></div>
+                </div>
+                <div class="mil-banner-wrapper" data-depth="0.2">
+                    <div id="swupPerson" class="mil-banner-frame"></div>
+                </div>
+                <div class="mil-flying-skills" data-depth="0.1">
+                    <div id="swupSkills" class="mil-skills-frame">
+                        <div class="mil-item" style="top: 30%; left: 10%">
+                            <img src="img/logos/1.jpg" alt="logo">
+                        </div>
+                        <div class="mil-item" style="bottom: 15%; left: 20%">
+                            <img src="img/logos/2.jpg" alt="logo">
+                        </div>
+                        <div class="mil-item" style="bottom: 45%; right: 15%">
+                            <img src="img/logos/3.jpg" alt="logo">
+                        </div>
+                        <div class="mil-el mil-addition-el-1">+</div>
+                        <div class="mil-el mil-addition-el-2">+</div>
+                        <div class="mil-el mil-addition-el-3"></div>
+                        <div class="mil-el mil-addition-el-4"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- content -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- jQuery js -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+    <!-- swup body class plugin js -->
+    <script src="js/plugins/SwupBodyClassPlugin.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- gsap js -->
+    <script src="js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="js/plugins/smooth-scroll.js"></script>
+    <!-- scroll trigger js -->
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- parallax js -->
+    <script src="js/plugins/parallax.js"></script>
+    <!-- courtney js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
