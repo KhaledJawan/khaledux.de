@@ -217,7 +217,7 @@
             </div>
 
             <!-- contact -->
-            <div id="contact" class="mil-p-90-60">
+            <!-- <div id="contact" class="mil-p-90-60">
               <form class="row align-items-center">
                 <div class="col-lg-6 mil-up">
                   <input type="text" placeholder="What's your name" />
@@ -242,7 +242,41 @@
                   </div>
                 </div>
               </form>
-            </div>
+            </div> -->
+            <div id="contact" class="mil-p-90-60">
+  <form id="contactForm" class="row align-items-center"
+        action="https://formspree.io/f/XXXXYYYY" method="POST" novalidate>
+
+    <!-- honeypot ضد اسپم -->
+    <input type="text" name="_hp" tabindex="-1" autocomplete="off"
+           style="position:absolute;left:-9999px" aria-hidden="true">
+
+    <div class="col-lg-6 mil-up">
+      <input type="text" name="name" id="name" placeholder="What's your name" required>
+    </div>
+    <div class="col-lg-6 mil-up">
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+    </div>
+    <div class="col-lg-12 mil-up">
+      <textarea name="message" id="message" placeholder="Tell me about our project" required></textarea>
+    </div>
+
+    <!-- پیام موفق/خطا -->
+    <div class="col-lg-8">
+      <p class="mil-up mil-mb-30">
+        <span class="mil-accent">*</span> I promise not to disclose your personal information to third parties.
+      </p>
+      <p id="formMsg" class="mil-up" style="display:none;"></p>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="mil-adaptive-right mil-up mil-mb-30">
+        <button type="submit" class="mil-btn mil-sm-btn"><span>Send message</span></button>
+      </div>
+    </div>
+  </form>
+</div>
+
             <!-- contact end -->
 
             <!-- footer -->
