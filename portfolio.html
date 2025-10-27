@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" class="is-animating">
+<html lang="de" class="is-animating">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
     <!-- KhaledJawan css -->
     <link rel="stylesheet" href="css/light-mode.css" />
     <!-- page name -->
-    <title>KhaledJawan</title>
+    <title>Khaled Jawan</title>
   </head>
 
   <body class="mil-fw-page">
@@ -32,7 +32,7 @@
             <div class="mil-circ-3"></div>
             <div class="mil-circ-4"></div>
           </div>
-          <div class="mil-upper">Loading</div>
+          <div class="mil-upper" data-i18n="preloader.loading">Loading</div>
         </div>
       </div>
       <!-- preloader end -->
@@ -41,25 +41,29 @@
         <!-- top bar -->
         <div class="mil-top-panel">
           <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-          <a href="index.html" class="mil-logo"><span>K</span></a>
+          <a href="index.html" class="mil-logo"
+            ><span data-i18n="nav.logoInitial">K</span></a
+          >
 
           <div class="mil-navigation">
             <nav id="swupMenu" class="mil-menu-transition">
               <ul>
                 <li class="mil-has-children">
-                  <a href="index.html">Home</a>
+                  <a data-i18n="nav.home" href="index.html">Home</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="story.html">My Story</a>
+                  <a data-i18n="nav.story" href="story.html">My Story</a>
                 </li>
                 <li class="mil-has-children mil-active">
-                  <a href="portfolio.html">Portfolio</a>
+                  <a data-i18n="nav.portfolio" href="portfolio.html"
+                    >Portfolio</a
+                  >
                 </li>
                 <li class="mil-has-children">
-                  <a href="service.html">Service</a>
+                  <a data-i18n="nav.services" href="service.html">Service</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="contact.html">Contact</a>
+                  <a data-i18n="nav.contact" href="contact.html">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -93,7 +97,10 @@
 
         <!-- left bar -->
         <div class="mil-left-panel">
-          <div class="mil-page-name mil-upper mil-dark">
+          <div
+            class="mil-page-name mil-upper mil-dark"
+            data-i18n="sidebar.name"
+          >
             Abdul Khaled Mohebi
           </div>
 
@@ -134,6 +141,19 @@
                 <i class="fab fa-discord"></i
               ></a>
             </li>
+             <li>
+            <div class="mil-top-panel-btns">
+            <a
+              id="langToggle"
+              href="#"
+              class="mil-logo"
+              aria-label="Switch language"
+              data-i18n-attr="aria-label:nav.toggleLabel"
+            >
+              <span id="langLabel">EN</span>
+            </a>
+
+            </li>
           </ul>
         </div>
         <!-- left bar end -->
@@ -141,7 +161,7 @@
         <!-- back to top -->
         <div class="mil-back-to-top">
           <a href="#top" class="mil-link mil-btt-icon">
-            <span>Back to top</span>
+            <span data-i18n="nav.backToTop">Back to top</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -172,22 +192,56 @@
               <div class="mil-banner-title">
                 <ul class="mil-puplication-details mil-up mil-mb-60">
                   <li>
-                    <span class="mil-upper mil-dark">Client: </span
-                    >&nbsp;&nbsp;<span class="mil-upper">Envato</span>
+                    <span
+                      class="mil-upper mil-dark"
+                      data-i18n="portfolio.banner.clientLabel"
+                      >Client:</span
+                    >&nbsp;&nbsp;<span
+                      class="mil-upper"
+                      data-i18n="portfolio.banner.client"
+                      >Envato</span
+                    >
                   </li>
                   <li>
-                    <span class="mil-upper mil-dark">Date: </span
-                    >&nbsp;&nbsp;<span class="mil-upper">may 2025</span>
+                    <span
+                      class="mil-upper mil-dark"
+                      data-i18n="portfolio.banner.dateLabel"
+                      >Date:</span
+                    >&nbsp;&nbsp;<span
+                      class="mil-upper"
+                      data-i18n="portfolio.banner.date"
+                      >May 2025</span
+                    >
                   </li>
-                  <li class="mil-upper mil-accent">Branding</li>
+                  <li
+                    class="mil-upper mil-accent"
+                    data-i18n="portfolio.banner.category"
+                  >
+                    Branding
+                  </li>
                 </ul>
-                <h1 class="mil-h1-md mil-up mil-mb-60">
+                <h1
+                  class="mil-h1-md mil-up mil-mb-60"
+                  data-i18n="portfolio.banner.title"
+                >
                   Aevoe. Visual Identity
                 </h1>
                 <ul class="mil-breadcrumbs mil-up">
-                  <li><a href="index.html">Homepage</a></li>
-                  <li><a href="portfolio-1.html">Portfolio</a></li>
-                  <li><a href="project-1.html">Project</a></li>
+                  <li>
+                    <a data-i18n="breadcrumbs.home" href="index.html"
+                      >Homepage</a
+                    >
+                  </li>
+                  <li>
+                    <a data-i18n="breadcrumbs.portfolio" href="portfolio-1.html"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a data-i18n="breadcrumbs.project" href="project-1.html"
+                      >Project</a
+                    >
+                  </li>
                 </ul>
               </div>
             </section>
@@ -204,7 +258,10 @@
             <section class="mil-p-90-30">
               <div class="row justify-content-center">
                 <div class="col-lg-9">
-                  <p class="mil-text-xl mil-dark mil-up mil-center mil-mb-90">
+                  <p
+                    class="mil-text-xl mil-dark mil-up mil-center mil-mb-90"
+                    data-i18n="portfolio.intro"
+                  >
                     Our pieces, ranging from sophisticated office chairs to
                     versatile home furniture, embody a unique blend of style,
                     functionality, and ergonomic excellence. Venture into the
@@ -238,14 +295,22 @@
                   />
                 </div>
                 <div class="col-lg-6">
-                  <h3 class="mil-up mil-mb-30">Visual identity design</h3>
+                  <h3
+                    class="mil-up mil-mb-30"
+                    data-i18n="portfolio.section.visualTitle"
+                  >
+                    Visual identity design
+                  </h3>
                 </div>
                 <div class="col-lg-6">
-                  <p class="mil-up mil-mb-15">
+                  <p
+                    class="mil-up mil-mb-15"
+                    data-i18n="portfolio.section.visualLead"
+                  >
                     Embrace the extraordinary with Aevoe - a premium furnishing
                     brand that fuses modern design with supreme comfort.
                   </p>
-                  <p class="mil-up mil-mb-30">
+                  <p class="mil-up mil-mb-30" data-i18n="portfolio.intro">
                     Our pieces, ranging from sophisticated office chairs to
                     versatile home furniture, embody a unique blend of style,
                     functionality, and ergonomic excellence. Venture into the
@@ -258,7 +323,7 @@
                     target="_blank"
                     class="mil-link mil-up mil-mb-60"
                   >
-                    <span>Visit website</span>
+                    <span data-i18n="common.visitWebsite">Visit website</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -306,7 +371,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Similar projects</h3>
+              <h3 data-i18n="portfolio.similar.title">Similar projects</h3>
             </div>
 
             <!-- similar projects -->
@@ -319,8 +384,15 @@
                     </div>
                     <div class="mil-description mil-up">
                       <div>
-                        <p class="mil-upper mil-mb-5">Branding</p>
-                        <h4>Doctive</h4>
+                        <p
+                          class="mil-upper mil-mb-5"
+                          data-i18n="portfolio.similar.item1.category"
+                        >
+                          Branding
+                        </p>
+                        <h4 data-i18n="portfolio.similar.item1.title">
+                          Doctive
+                        </h4>
                       </div>
                       <div class="mil-link mil-icon-link">
                         <svg
@@ -349,8 +421,15 @@
                     </div>
                     <div class="mil-description mil-up">
                       <div>
-                        <p class="mil-upper mil-mb-5">Branding</p>
-                        <h4>Unique card holder</h4>
+                        <p
+                          class="mil-upper mil-mb-5"
+                          data-i18n="portfolio.similar.item2.category"
+                        >
+                          Branding
+                        </p>
+                        <h4 data-i18n="portfolio.similar.item2.title">
+                          Unique card holder
+                        </h4>
                       </div>
                       <div class="mil-link mil-icon-link">
                         <svg
@@ -383,13 +462,20 @@
               <div class="row justify-content-center">
                 <div class="col-lg-10">
                   <div class="mil-center">
-                    <h1 class="mil-h1-sm mil-up mil-mb-60">
+                    <h1
+                      class="mil-h1-sm mil-up mil-mb-60"
+                      data-i18n="cta.title"
+                    >
                       Ready to bring your ideas to life? I'm here to help
                     </h1>
                     <div class="mil-up">
-                      <a href="contact.html" class="mil-btn mil-sm-btn"
-                        >Contact me</a
+                      <a
+                        href="contact.html"
+                        class="mil-btn mil-sm-btn"
+                        data-i18n="cta.button"
                       >
+                        Contact me
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -399,7 +485,9 @@
 
             <!-- footer -->
             <footer class="mil-fw">
-              <p class="mil-light-soft">© 2025. Khaled. All rights reserved.</p>
+              <p class="mil-light-soft" data-i18n="footer.copyright">
+                © 2025. Khaled. All rights reserved.
+              </p>
               <!-- <p class="mil-light-soft">
                 Author: &nbsp;<a
                   href="https://themeforest.net/user/millerdigitaldesign/portfolio"
@@ -463,6 +551,8 @@
     <script src="js/plugins/ScrollTrigger.min.js"></script>
     <!-- parallax js -->
     <script src="js/plugins/parallax.js"></script>
+    <!-- i18n js -->
+    <script src="js/i18n.js"></script>
     <!-- KhaledJawan js -->
     <script src="js/main.js"></script>
   </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" class="is-animating">
+<html lang="de" class="is-animating">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,10 +14,14 @@
     <!-- Khaled css -->
     <link rel="stylesheet" href="css/light-mode.css" />
     <!-- page name -->
-    <title>KhaledJawan</title>
+    <title>Khaled Jawan</title>
   </head>
 
   <body>
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
       <!-- preloader -->
@@ -41,25 +45,29 @@
         <!-- top bar -->
         <div class="mil-top-panel">
           <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-          <a href="index.html" class="mil-logo"><span>K</span></a>
+          <a href="index.html" class="mil-logo"
+            ><span data-i18n="nav.logoInitial">K</span></a
+          >
 
           <div class="mil-navigation">
             <nav id="swupMenu" class="mil-menu-transition">
               <ul>
                 <li class="mil-has-children mil-active">
-                  <a href="index.html">Home</a>
+                  <a data-i18n="nav.home" href="index.html">Home</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="story.html">My Story</a>
+                  <a data-i18n="nav.story" href="story.html">My Story</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="portfolio.html">Portfolio</a>
+                  <a data-i18n="nav.portfolio" href="portfolio.html"
+                    >Portfolio</a
+                  >
                 </li>
                 <li class="mil-has-children">
-                  <a href="service.html">Service</a>
+                  <a data-i18n="nav.services" href="service.html">Service</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="contact.html">Contact</a>
+                  <a data-i18n="nav.contact" href="contact.html">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -93,7 +101,7 @@
 
         <!-- left bar -->
         <div class="mil-left-panel">
-          <div class="mil-page-name mil-upper mil-dark">
+          <div class="mil-page-name mil-upper mil-dark" data-i18n="sidebar.name">
             Abdul Khaled Mohebi
           </div>
 
@@ -134,6 +142,20 @@
                 <i class="fab fa-discord"></i
               ></a>
             </li>
+            <li>
+            <div class="mil-top-panel-btns">
+            <a
+              id="langToggle"
+              href="#"
+              class="mil-logo"
+              aria-label="Switch language"
+              data-i18n-attr="aria-label:nav.toggleLabel"
+            >
+              <span id="langLabel">EN</span>
+            </a>
+
+            </li>
+       </a>
           </ul>
         </div>
         <!-- left bar end -->
@@ -141,7 +163,7 @@
         <!-- back to top -->
         <div class="mil-back-to-top">
           <a href="#top" class="mil-link mil-btt-icon">
-            <span>Back to top</span>
+            <span data-i18n="nav.backToTop">Back to top</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -170,11 +192,21 @@
             <section class="mil-side-banner mil-center">
               <div class="mil-banner-top mil-up"></div>
               <div class="mil-banner-title">
-                <div class="mil-upper mil-dark mil-up mil-mb-30">
+                <div
+                  class="mil-upper mil-dark mil-up mil-mb-30"
+                  data-i18n="hero.greeting"
+                >
                   Hi! My name is
                 </div>
-                <h1 class="mil-up mil-mb-30">Khaled<br />Jawan</h1>
-                <p class="mil-upper mil-dark mil-up">UI/UX Designer</p>
+                <h1 class="mil-up mil-mb-30" data-i18n="hero.name">
+                  Khaled<br />Jawan
+                </h1>
+                <p
+                  class="mil-upper mil-dark mil-up"
+                  data-i18n="hero.role"
+                >
+                  UI/UX Designer
+                </p>
               </div>
               <div class="mil-up mil-oval-frame">
                 <div class="mil-circle-text">
@@ -201,7 +233,10 @@
                       <use xlink:href="#circlePath" fill="none" />
                       <text style="letter-spacing: 6.5px">
                         <!-- circle text -->
-                        <textPath xlink:href="#circlePath">
+                        <textPath
+                          xlink:href="#circlePath"
+                          data-i18n="hero.scrollText"
+                        >
                           Scroll down - Scroll down -
                         </textPath>
                       </text>
@@ -237,14 +272,20 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <div class="mil-center">
-                    <h2 class="mil-up mil-mb-30">
+                    <h2
+                      class="mil-up mil-mb-30"
+                      data-i18n="about.title"
+                    >
                       Hi! My name is Khaled, <br />i’m UI/UX Designer based in
                       Germany
                     </h2>
                     <div class="mil-quote mil-up mil-mb-30">
                       <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="mil-up mil-mb-30">
+                    <p
+                      class="mil-up mil-mb-30"
+                      data-i18n="about.description"
+                    >
                       I am a passionate and dedicated UI/UX designer with a
                       strong focus on creating exceptional user experiences. I
                       thrive on transforming complex ideas into intuitive and
@@ -266,7 +307,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Services</h3>
+              <h3 data-i18n="services.sectionTitle">Services</h3>
             </div>
 
             <!-- services -->
@@ -277,8 +318,16 @@
                     <div class="mil-service-icon mil-up">
                       <img src="img/icons/1.svg" alt="icon" class="mil-mb-30" />
                     </div>
-                    <h5 class="mil-up mil-mb-30">UI/UX Design</h5>
-                    <p class="mil-up mil-mb-30">
+                    <h5
+                      class="mil-up mil-mb-30"
+                      data-i18n="services.uiux.title"
+                    >
+                      UI/UX Design
+                    </h5>
+                    <p
+                      class="mil-up mil-mb-30"
+                      data-i18n="services.uiux.description"
+                    >
                       Elevate your online presence with captivating user
                       interfaces and seamless.
                     </p>
@@ -308,8 +357,16 @@
                     <div class="mil-service-icon mil-up">
                       <img src="img/icons/2.svg" alt="icon" class="mil-mb-30" />
                     </div>
-                    <h5 class="mil-up mil-mb-30">Logo Design</h5>
-                    <p class="mil-up mil-mb-30">
+                    <h5
+                      class="mil-up mil-mb-30"
+                      data-i18n="services.logo.title"
+                    >
+                      Logo Design
+                    </h5>
+                    <p
+                      class="mil-up mil-mb-30"
+                      data-i18n="services.logo.description"
+                    >
                       Establish a strong and cohesive brand identity that
                       resonates with your audience.
                     </p>
@@ -339,8 +396,16 @@
                     <div class="mil-service-icon mil-up">
                       <img src="img/icons/3.svg" alt="icon" class="mil-mb-30" />
                     </div>
-                    <h5 class="mil-up mil-mb-30">Branding</h5>
-                    <p class="mil-up mil-mb-30">
+                    <h5
+                      class="mil-up mil-mb-30"
+                      data-i18n="services.branding.title"
+                    >
+                      Branding
+                    </h5>
+                    <p
+                      class="mil-up mil-mb-30"
+                      data-i18n="services.branding.description"
+                    >
                       All of which have a singular goal: to build environments
                       where our clients thrive.
                     </p>
@@ -371,7 +436,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Language Skills</h3>
+              <h3 data-i18n="languages.sectionTitle">Language Skills</h3>
             </div>
 
             <!-- language -->
@@ -381,40 +446,72 @@
                   <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
                     <div class="mil-circular-progress" data-value="90%">
                       <div class="mil-counter-frame mil-upper mil-dark">
-                        <span class="mil-counter" data-number="">C1</span>
+                        <span
+                          class="mil-counter"
+                          data-number=""
+                          data-i18n="languages.german.level"
+                        >
+                          C1
+                        </span>
                       </div>
                     </div>
-                    <h6 class="mil-up">German</h6>
+                    <h6 class="mil-up" data-i18n="languages.german.label">
+                      German
+                    </h6>
                   </div>
                 </div>
                 <div class="col-6 col-lg-3">
                   <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
                     <div class="mil-circular-progress" data-value="90%">
                       <div class="mil-counter-frame mil-upper mil-dark">
-                        <span class="mil-counter" data-number="">C1</span>
+                        <span
+                          class="mil-counter"
+                          data-number=""
+                          data-i18n="languages.english.level"
+                        >
+                          C1
+                        </span>
                       </div>
                     </div>
-                    <h6 class="mil-up">English</h6>
+                    <h6 class="mil-up" data-i18n="languages.english.label">
+                      English
+                    </h6>
                   </div>
                 </div>
                 <div class="col-6 col-lg-3">
                   <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
                     <div class="mil-circular-progress" data-value="25%">
                       <div class="mil-counter-frame mil-upper mil-dark">
-                        <span class="mil-counter" data-number="">A2</span>
+                        <span
+                          class="mil-counter"
+                          data-number=""
+                          data-i18n="languages.french.level"
+                        >
+                          A2
+                        </span>
                       </div>
                     </div>
-                    <h6 class="mil-up">French</h6>
+                    <h6 class="mil-up" data-i18n="languages.french.label">
+                      French
+                    </h6>
                   </div>
                 </div>
                 <div class="col-6 col-lg-3">
                   <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
                     <div class="mil-circular-progress" data-value="100%">
                       <div class="mil-counter-frame mil-upper mil-dark">
-                        <span class="mil-counter" data-number="">Native</span>
+                        <span
+                          class="mil-counter"
+                          data-number=""
+                          data-i18n="languages.persian.level"
+                        >
+                          Native
+                        </span>
                       </div>
                     </div>
-                    <h6 class="mil-up">Persian</h6>
+                    <h6 class="mil-up" data-i18n="languages.persian.label">
+                      Persian
+                    </h6>
                   </div>
                 </div>
               </div>
@@ -423,7 +520,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Hard Skills</h3>
+              <h3 data-i18n="skills.sectionTitle">Hard Skills</h3>
             </div>
 
             <!-- hard skills -->
@@ -431,7 +528,12 @@
               <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6">
                   <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30">Figma</h6>
+                    <h6
+                      class="mil-up mil-mb-30"
+                      data-i18n="skills.figma"
+                    >
+                      Figma
+                    </h6>
                     <div class="mil-line-progress mil-up">
                       <div class="mil-bar" data-value=""></div>
                     </div>
@@ -439,7 +541,12 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30">Adobe XD</h6>
+                    <h6
+                      class="mil-up mil-mb-30"
+                      data-i18n="skills.adobeXd"
+                    >
+                      Adobe XD
+                    </h6>
                     <div class="mil-line-progress mil-up">
                       <div class="mil-bar" data-value=""></div>
                     </div>
@@ -447,7 +554,12 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30">Sketch</h6>
+                    <h6
+                      class="mil-up mil-mb-30"
+                      data-i18n="skills.sketch"
+                    >
+                      Sketch
+                    </h6>
                     <div class="mil-line-progress mil-up">
                       <div class="mil-bar" data-value=""></div>
                     </div>
@@ -455,7 +567,12 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30">Photoshop, Illustrator</h6>
+                    <h6
+                      class="mil-up mil-mb-30"
+                      data-i18n="skills.adobeSuite"
+                    >
+                      Photoshop, Illustrator
+                    </h6>
                     <div class="mil-line-progress mil-up">
                       <div class="mil-bar" data-value=""></div>
                     </div>
@@ -463,7 +580,12 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30">Programming skills:</h6>
+                    <h6
+                      class="mil-up mil-mb-30"
+                      data-i18n="skills.programming.label"
+                    >
+                      Programming skills:
+                    </h6>
                     <div class="mil-line-progress mil-up">
                       <div class="mil-bar" data-value=""></div>
                     </div>
@@ -471,7 +593,10 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30">
+                    <h6
+                      class="mil-up mil-mb-30"
+                      data-i18n="skills.programming.tools"
+                    >
                       Python, Java, HTML, CSS, JavaScript
                     </h6>
                     <div class="mil-line-progress mil-up">
@@ -485,7 +610,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Reviews</h3>
+              <h3 data-i18n="reviews.sectionTitle">Reviews</h3>
             </div>
 
             <!-- revievs -->
@@ -508,14 +633,22 @@
                               class="mil-avatar mil-up"
                             />
                             <div class="mil-name">
-                              <h4 class="mil-up mil-mb-5">Natalie Luckner</h4>
-                              <p class="mil-upper mil-up">
+                              <h4
+                                class="mil-up mil-mb-5"
+                                data-i18n="reviews.natalie.name"
+                              >
+                                Natalie Luckner
+                              </h4>
+                              <p
+                                class="mil-upper mil-up"
+                                data-i18n="reviews.natalie.role"
+                              >
                                 Koordination Bundesfreiwilligendienst in
                                 Technisches Hilfswerk
                               </p>
                             </div>
                           </div>
-                          <p class="mil-up">
+                          <p class="mil-up" data-i18n="reviews.natalie.quote">
                             Working with Khaled Jawan as our UI designer was an
                             absolute pleasure. Her attention to detail and
                             creative approach brought our vision to life. The
@@ -539,11 +672,21 @@
                               class="mil-avatar mil-up"
                             />
                             <div class="mil-name">
-                              <h4 class="mil-up mil-mb-5">Saifuddin Sepehr</h4>
-                              <p class="mil-upper mil-up">CEO, Microcis</p>
+                              <h4
+                                class="mil-up mil-mb-5"
+                                data-i18n="reviews.saif.name"
+                              >
+                                Saifuddin Sepehr
+                              </h4>
+                              <p
+                                class="mil-upper mil-up"
+                                data-i18n="reviews.saif.role"
+                              >
+                                CEO, Microcis
+                              </p>
                             </div>
                           </div>
-                          <p class="mil-up">
+                          <p class="mil-up" data-i18n="reviews.saif.quote">
                             I had the opportunity to collaborate with Khaled,
                             and I must say she is incredibly talented. Her
                             ability to understand our brand and translate it
@@ -568,13 +711,21 @@
                               class="mil-avatar mil-up"
                             />
                             <div class="mil-name">
-                              <h4 class="mil-up mil-mb-5">Sanzar Kakar</h4>
-                              <p class="mil-upper mil-up">
+                              <h4
+                                class="mil-up mil-mb-5"
+                                data-i18n="reviews.sanzar.name"
+                              >
+                                Sanzar Kakar
+                              </h4>
+                              <p
+                                class="mil-upper mil-up"
+                                data-i18n="reviews.sanzar.role"
+                              >
                                 Chairman, Moore Afghanistan
                               </p>
                             </div>
                           </div>
-                          <p class="mil-up">
+                          <p class="mil-up" data-i18n="reviews.sanzar.quote">
                             Khaled Jawan is an exceptional UI designer. She has
                             a keen eye for aesthetics and understands how to
                             create interfaces. Khaled's designs greatly improved
@@ -598,13 +749,21 @@
                               class="mil-avatar mil-up"
                             />
                             <div class="mil-name">
-                              <h4 class="mil-up mil-mb-5">Said Jawad Saidi</h4>
-                              <p class="mil-upper mil-up">
+                              <h4
+                                class="mil-up mil-mb-5"
+                                data-i18n="reviews.said.name"
+                              >
+                                Said Jawad Saidi
+                              </h4>
+                              <p
+                                class="mil-upper mil-up"
+                                data-i18n="reviews.said.role"
+                              >
                                 Senior Engineer, Huawei
                               </p>
                             </div>
                           </div>
-                          <p class="mil-up">
+                          <p class="mil-up" data-i18n="reviews.said.quote">
                             Working with Khaled Jawan as our UI designer was an
                             absolute pleasure. Her attention to detail and
                             creative approach brought our vision to life. The
@@ -662,7 +821,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Latest from blog</h3>
+              <h3 data-i18n="blog.sectionTitle">Latest from blog</h3>
             </div>
 
             <!-- blog -->
@@ -691,10 +850,13 @@
                       </div>
                     </div>
                     <div class="mil-descr">
-                      <h4 class="mil-up mil-mb-30">
+                      <h4
+                        class="mil-up mil-mb-30"
+                        data-i18n="blog.post1.title"
+                      >
                         How to Become a Graphic Designer in 10 Simple Steps
                       </h4>
-                      <p class="mil-up">
+                      <p class="mil-up" data-i18n="blog.post1.excerpt">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Eius sequi commodi dignissimos.
                       </p>
@@ -724,10 +886,13 @@
                       </div>
                     </div>
                     <div class="mil-descr">
-                      <h4 class="mil-up mil-mb-30">
+                      <h4
+                        class="mil-up mil-mb-30"
+                        data-i18n="blog.post2.title"
+                      >
                         16 Best Graphic Design Online and Offline Courses
                       </h4>
-                      <p class="mil-up">
+                      <p class="mil-up" data-i18n="blog.post2.excerpt">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Eius sequi commodi dignissimos.
                       </p>
@@ -745,13 +910,20 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <div class="mil-center">
-                    <h2 class="mil-up mil-mb-30">
+                    <h2
+                      class="mil-up mil-mb-30"
+                      data-i18n="cta.title"
+                    >
                       Ready to bring your ideas to life? I'm here to help
                     </h2>
                     <div class="mil-up">
-                      <a href="contact.html" class="mil-btn mil-sm-btn"
-                        >Contact me</a
+                      <a
+                        href="contact.html"
+                        class="mil-btn mil-sm-btn"
+                        data-i18n="cta.button"
                       >
+                        Contact me
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -761,7 +933,12 @@
 
             <!-- footer -->
             <footer class="mil-fw">
-              <p class="mil-light-soft">© 2025. Khaled. All rights reserved.</p>
+              <p
+                class="mil-light-soft"
+                data-i18n="footer.copyright"
+              >
+                © 2025. Khaled. All rights reserved.
+              </p>
               <!-- <p class="mil-light-soft">
                 Author: &nbsp;<a
                   href="https://themeforest.net/user/millerdigitaldesign/portfolio"
@@ -837,6 +1014,8 @@
     <script src="js/plugins/ScrollTrigger.min.js"></script>
     <!-- parallax js -->
     <script src="js/plugins/parallax.js"></script>
+    <!-- i18n js -->
+    <script src="js/i18n.js"></script>
     <!-- Khaled js -->
     <script src="js/main.js"></script>
   </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" class="is-animating">
+<html lang="de" class="is-animating">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
     <!-- KhaledJawan css -->
     <link rel="stylesheet" href="css/light-mode.css" />
     <!-- page name -->
-    <title>KhaledJawan</title>
+    <title>Khaled Jawan</title>
   </head>
 
   <body>
@@ -32,7 +32,7 @@
             <div class="mil-circ-3"></div>
             <div class="mil-circ-4"></div>
           </div>
-          <div class="mil-upper">Loading</div>
+          <div class="mil-upper" data-i18n="preloader.loading">Loading</div>
         </div>
       </div>
       <!-- preloader end -->
@@ -41,25 +41,29 @@
         <!-- top bar -->
         <div class="mil-top-panel">
           <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-          <a href="index.html" class="mil-logo"><span>K</span></a>
+          <a href="index.html" class="mil-logo"
+            ><span data-i18n="nav.logoInitial">K</span></a
+          >
 
           <div class="mil-navigation">
             <nav id="swupMenu" class="mil-menu-transition">
               <ul>
                 <li class="mil-has-children">
-                  <a href="index.html">Home</a>
+                  <a data-i18n="nav.home" href="index.html">Home</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="story.html">My Story</a>
+                  <a data-i18n="nav.story" href="story.html">My Story</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="portfolio.html">Portfolio</a>
+                  <a data-i18n="nav.portfolio" href="portfolio.html"
+                    >Portfolio</a
+                  >
                 </li>
                 <li class="mil-has-children mil-active">
-                  <a href="service.html">Service</a>
+                  <a data-i18n="nav.services" href="service.html">Service</a>
                 </li>
                 <li class="mil-has-children">
-                  <a href="contact.html">Contact</a>
+                  <a data-i18n="nav.contact" href="contact.html">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -93,7 +97,10 @@
 
         <!-- left bar -->
         <div class="mil-left-panel">
-          <div class="mil-page-name mil-upper mil-dark">
+          <div
+            class="mil-page-name mil-upper mil-dark"
+            data-i18n="sidebar.name"
+          >
             Abdul Khaled Mohebi
           </div>
 
@@ -134,6 +141,19 @@
                 <i class="fab fa-discord"></i
               ></a>
             </li>
+             <li>
+            <div class="mil-top-panel-btns">
+            <a
+              id="langToggle"
+              href="#"
+              class="mil-logo"
+              aria-label="Switch language"
+              data-i18n-attr="aria-label:nav.toggleLabel"
+            >
+              <span id="langLabel">EN</span>
+            </a>
+
+            </li>
           </ul>
         </div>
         <!-- left bar end -->
@@ -141,7 +161,7 @@
         <!-- back to top -->
         <div class="mil-back-to-top">
           <a href="#top" class="mil-link mil-btt-icon">
-            <span>Back to top</span>
+            <span data-i18n="nav.backToTop">Back to top</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -170,11 +190,28 @@
             <section class="mil-banner-sm mil-center">
               <div class="mil-banner-top mil-up"></div>
               <div class="mil-banner-title">
-                <h1 class="mil-h1-sm mil-up mil-mb-60">UI/UX Design</h1>
+                <h1
+                  class="mil-h1-sm mil-up mil-mb-60"
+                  data-i18n="service.banner.title"
+                >
+                  UI/UX Design
+                </h1>
                 <ul class="mil-breadcrumbs mil-up">
-                  <li><a href="index.html">Homepage</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="service.html">Service</a></li>
+                  <li>
+                    <a data-i18n="breadcrumbs.home" href="index.html"
+                      >Homepage</a
+                    >
+                  </li>
+                  <li>
+                    <a data-i18n="breadcrumbs.services" href="services.html"
+                      >Services</a
+                    >
+                  </li>
+                  <li>
+                    <a data-i18n="breadcrumbs.service" href="service.html"
+                      >Service</a
+                    >
+                  </li>
                 </ul>
               </div>
             </section>
@@ -182,14 +219,19 @@
 
             <div class="mil-section-title mil-up mil-mb-90">
               <div class="mil-divider"></div>
-              <h3>What is UI/UX Design</h3>
+              <h3 data-i18n="service.sections.whatIsTitle">
+                What is UI/UX Design
+              </h3>
             </div>
 
             <!-- about -->
             <div class="">
               <div class="row justify-content-center">
                 <div class="col-lg-10">
-                  <p class="mil-text-lg mil-dark mil-center mil-up mil-mb-90">
+                  <p
+                    class="mil-text-lg mil-dark mil-center mil-up mil-mb-90"
+                    data-i18n="service.whatIs.description"
+                  >
                     UI/UX design stands for User Interface/User Experience
                     design. It involves creating visually appealing and
                     user-friendly interfaces for digital products. UI design
@@ -207,7 +249,7 @@
 
             <div class="mil-section-title mil-up mil-mb-90">
               <div class="mil-divider"></div>
-              <h3>Processes</h3>
+              <h3 data-i18n="service.sections.processesTitle">Processes</h3>
             </div>
 
             <!-- service -->
@@ -216,7 +258,12 @@
                 <div class="col-lg-12">
                   <div class="mil-accordion-group mil-up">
                     <div class="mil-accordion-menu">
-                      <p class="mil-accordion-head">UX Audits</p>
+                      <p
+                        class="mil-accordion-head"
+                        data-i18n="service.processes.uxAudits.title"
+                      >
+                        UX Audits
+                      </p>
 
                       <div class="mil-symbol mil-h3">
                         <div class="mil-plus">+</div>
@@ -224,7 +271,10 @@
                       </div>
                     </div>
                     <div class="mil-accordion-content">
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.uxAudits.paragraph1"
+                      >
                         A UX audit is a service that evaluates the user
                         experience (UX) of a website. It involves analyzing the
                         website's design, functionality, and content to identify
@@ -232,7 +282,10 @@
                         experience.
                       </p>
 
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.uxAudits.paragraph2"
+                      >
                         During a UX audit, a team of UX experts will conduct a
                         thorough review of the website and provide a
                         comprehensive report that outlines specific
@@ -240,7 +293,10 @@
                         accessibility, and overall user experience.
                       </p>
 
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.uxAudits.paragraph3"
+                      >
                         The audit may cover various aspects of the website, such
                         as navigation, layout, visual design, content structure,
                         and mobile responsiveness. The goal is to identify any
@@ -249,7 +305,10 @@
                         recommendations to improve their experience.
                       </p>
 
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.uxAudits.paragraph4"
+                      >
                         In summary, a UX audit can help website owners identify
                         areas of improvement that can enhance their website's
                         user experience and increase user engagement and
@@ -260,7 +319,12 @@
 
                   <div class="mil-accordion-group mil-up">
                     <div class="mil-accordion-menu">
-                      <p class="mil-accordion-head">Design thinking</p>
+                      <p
+                        class="mil-accordion-head"
+                        data-i18n="service.processes.designThinking.title"
+                      >
+                        Design thinking
+                      </p>
 
                       <div class="mil-symbol mil-h3">
                         <div class="mil-plus">+</div>
@@ -268,7 +332,10 @@
                       </div>
                     </div>
                     <div class="mil-accordion-content">
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.designThinking.paragraph1"
+                      >
                         Design thinking is a problem-solving approach that
                         emphasizes empathy, creativity, and collaboration. It
                         involves understanding the needs and perspectives of
@@ -276,7 +343,10 @@
                         multiple possible solutions, prototyping and testing
                         those solutions, and iterating based on feedback.
                       </p>
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.designThinking.paragraph2"
+                      >
                         Design thinking encourages a human-centered approach to
                         innovation and is often used in fields such as product
                         design, user experience (UX) design, and business
@@ -290,7 +360,12 @@
 
                   <div class="mil-accordion-group mil-up">
                     <div class="mil-accordion-menu">
-                      <p class="mil-accordion-head">wireframing</p>
+                      <p
+                        class="mil-accordion-head"
+                        data-i18n="service.processes.wireframing.title"
+                      >
+                        wireframing
+                      </p>
 
                       <div class="mil-symbol mil-h3">
                         <div class="mil-plus">+</div>
@@ -298,7 +373,10 @@
                       </div>
                     </div>
                     <div class="mil-accordion-content">
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.wireframing.paragraph1"
+                      >
                         Wireframing is a vital step in web design where a visual
                         representation of a website's structure is created. It
                         focuses on layout and user experience, using basic
@@ -315,7 +393,12 @@
 
                   <div class="mil-accordion-group mil-up">
                     <div class="mil-accordion-menu">
-                      <p class="mil-accordion-head">Methodologies</p>
+                      <p
+                        class="mil-accordion-head"
+                        data-i18n="service.processes.methodologies.title"
+                      >
+                        Methodologies
+                      </p>
 
                       <div class="mil-symbol mil-h3">
                         <div class="mil-plus">+</div>
@@ -323,7 +406,10 @@
                       </div>
                     </div>
                     <div class="mil-accordion-content">
-                      <p class="mil-mb-30">
+                      <p
+                        class="mil-mb-30"
+                        data-i18n="service.processes.methodologies.paragraph1"
+                      >
                         Libero quam alias tempora facilis necessitatibus quis
                         officiis voluptatem architecto harum exercitationem
                         quidem illum eligendi. Veniam non vitae, nemo dolor
@@ -343,7 +429,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Price</h3>
+              <h3 data-i18n="service.sections.pricingTitle">Price</h3>
             </div>
 
             <!-- prices -->
@@ -351,26 +437,57 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="mil-price-card mil-up mil-mb-30">
-                    <h4 class="mil-upper mil-accent mil-up mil-mb-30">
+                    <h4
+                      class="mil-upper mil-accent mil-up mil-mb-30"
+                      data-i18n="service.pricing.hourly.title"
+                    >
                       Hourly payment
                     </h4>
 
-                    <div class="mil-price-number mil-up mil-mb-30">
+                    <div
+                      class="mil-price-number mil-up mil-mb-30"
+                      data-i18n="service.pricing.hourly.price"
+                    >
                       $17 <span>/ho</span>
                     </div>
 
                     <div class="mil-divider mil-up mil-mb-30"></div>
 
                     <ul class="mil-mb-60">
-                      <li class="mil-up">Dolorum sed doloribus</li>
-                      <li class="mil-up">Consectetur adipisicing elit</li>
-                      <li class="mil-up">Maxime libero</li>
-                      <li class="mil-up mil-empty">Atque esse odit</li>
-                      <li class="mil-up mil-empty">Laboriosam corporis</li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.hourly.items.0"
+                      >
+                        Dolorum sed doloribus
+                      </li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.hourly.items.1"
+                      >
+                        Consectetur adipisicing elit
+                      </li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.hourly.items.2"
+                      >
+                        Maxime libero
+                      </li>
+                      <li
+                        class="mil-up mil-empty"
+                        data-i18n="service.pricing.hourly.items.3"
+                      >
+                        Atque esse odit
+                      </li>
+                      <li
+                        class="mil-up mil-empty"
+                        data-i18n="service.pricing.hourly.items.4"
+                      >
+                        Laboriosam corporis
+                      </li>
                     </ul>
 
                     <a href="contact.html" class="mil-link mil-up">
-                      <span>Visit website</span>
+                      <span data-i18n="common.visitWebsite">Visit website</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -391,26 +508,57 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="mil-price-card mil-up mil-mb-30">
-                    <h4 class="mil-upper mil-accent mil-up mil-mb-30">
+                    <h4
+                      class="mil-upper mil-accent mil-up mil-mb-30"
+                      data-i18n="service.pricing.monthly.title"
+                    >
                       Monthly payment
                     </h4>
 
-                    <div class="mil-price-number mil-up mil-mb-30">
+                    <div
+                      class="mil-price-number mil-up mil-mb-30"
+                      data-i18n="service.pricing.monthly.price"
+                    >
                       $2900 <span>/ho</span>
                     </div>
 
                     <div class="mil-divider mil-up mil-mb-30"></div>
 
                     <ul class="mil-mb-60">
-                      <li class="mil-up">Dolorum sed doloribus</li>
-                      <li class="mil-up">Consectetur adipisicing elit</li>
-                      <li class="mil-up">Maxime libero</li>
-                      <li class="mil-up">Atque esse odit</li>
-                      <li class="mil-up">Laboriosam corporis</li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.monthly.items.0"
+                      >
+                        Dolorum sed doloribus
+                      </li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.monthly.items.1"
+                      >
+                        Consectetur adipisicing elit
+                      </li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.monthly.items.2"
+                      >
+                        Maxime libero
+                      </li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.monthly.items.3"
+                      >
+                        Atque esse odit
+                      </li>
+                      <li
+                        class="mil-up"
+                        data-i18n="service.pricing.monthly.items.4"
+                      >
+                        Laboriosam corporis
+                      </li>
                     </ul>
 
                     <a href="contact.html" class="mil-link mil-up">
-                      <span>Visit website</span>
+                      <span data-i18n="common.visitWebsite">Visit website</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -435,7 +583,7 @@
 
             <div class="mil-section-title mil-up">
               <div class="mil-divider"></div>
-              <h3>Reviews</h3>
+              <h3 data-i18n="service.sections.reviewsTitle">Reviews</h3>
             </div>
 
             <!-- revievs -->
@@ -458,11 +606,24 @@
                               class="mil-avatar mil-up"
                             />
                             <div class="mil-name">
-                              <h4 class="mil-up mil-mb-5">Paul Trueman</h4>
-                              <p class="mil-upper mil-up">Eqanta app</p>
+                              <h4
+                                class="mil-up mil-mb-5"
+                                data-i18n="service.reviews.paul.name"
+                              >
+                                Paul Trueman
+                              </h4>
+                              <p
+                                class="mil-upper mil-up"
+                                data-i18n="service.reviews.paul.role"
+                              >
+                                Eqanta app
+                              </p>
                             </div>
                           </div>
-                          <p class="mil-up">
+                          <p
+                            class="mil-up"
+                            data-i18n="service.reviews.paul.quote"
+                          >
                             Working with KhaledJawan Davis as our UI designer
                             was an absolute pleasure. Her attention to detail
                             and creative approach brought our vision to life.
@@ -486,11 +647,24 @@
                               class="mil-avatar mil-up"
                             />
                             <div class="mil-name">
-                              <h4 class="mil-up mil-mb-5">Olivia Oldman</h4>
-                              <p class="mil-upper mil-up">Eqanta app</p>
+                              <h4
+                                class="mil-up mil-mb-5"
+                                data-i18n="service.reviews.olivia.name"
+                              >
+                                Olivia Oldman
+                              </h4>
+                              <p
+                                class="mil-upper mil-up"
+                                data-i18n="service.reviews.olivia.role"
+                              >
+                                Eqanta app
+                              </p>
                             </div>
                           </div>
-                          <p class="mil-up">
+                          <p
+                            class="mil-up"
+                            data-i18n="service.reviews.olivia.quote"
+                          >
                             I had the opportunity to collaborate with
                             KhaledJawan, and I must say she is incredibly
                             talented. Her ability to understand our brand and
@@ -515,11 +689,24 @@
                               class="mil-avatar mil-up"
                             />
                             <div class="mil-name">
-                              <h4 class="mil-up mil-mb-5">Oscar Newman</h4>
-                              <p class="mil-upper mil-up">Eqanta app</p>
+                              <h4
+                                class="mil-up mil-mb-5"
+                                data-i18n="service.reviews.oscar.name"
+                              >
+                                Oscar Newman
+                              </h4>
+                              <p
+                                class="mil-upper mil-up"
+                                data-i18n="service.reviews.oscar.role"
+                              >
+                                Eqanta app
+                              </p>
                             </div>
                           </div>
-                          <p class="mil-up">
+                          <p
+                            class="mil-up"
+                            data-i18n="service.reviews.oscar.quote"
+                          >
                             KhaledJawan Davis is an exceptional UI designer. She
                             has a keen eye for aesthetics and understands how to
                             create interfaces. KhaledJawan's designs greatly
@@ -582,13 +769,17 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <div class="mil-center">
-                    <h2 class="mil-up mil-mb-30">
+                    <h2 class="mil-up mil-mb-30" data-i18n="cta.title">
                       Ready to bring your ideas to life? I'm here to help
                     </h2>
                     <div class="mil-up">
-                      <a href="contact.html" class="mil-btn mil-sm-btn"
-                        >Contact me</a
+                      <a
+                        href="contact.html"
+                        class="mil-btn mil-sm-btn"
+                        data-i18n="cta.button"
                       >
+                        Contact me
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -598,7 +789,7 @@
 
             <!-- footer -->
             <footer class="mil-fw">
-              <p class="mil-light-soft">
+              <p class="mil-light-soft" data-i18n="footer.serviceCopyright">
                 © 2025. KhaledJawan. All rights reserved.
               </p>
               <!-- href="ihttps://themeforest.net/user/millerdigitaldesign/portfolo" -->
@@ -670,6 +861,8 @@
     <script src="js/plugins/ScrollTrigger.min.js"></script>
     <!-- parallax js -->
     <script src="js/plugins/parallax.js"></script>
+    <!-- i18n js -->
+    <script src="js/i18n.js"></script>
     <!-- KhaledJawan js -->
     <script src="js/main.js"></script>
   </body>

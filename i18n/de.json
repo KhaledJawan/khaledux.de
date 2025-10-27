@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "title": "Khaled Jawan"
+  },
+  "preloader": {
+    "loading": "Wird geladen"
+  },
+  "nav": {
+    "logoInitial": "K",
+    "home": "Startseite",
+    "story": "Über mich",
+    "portfolio": "Portfolio",
+    "services": "Leistungen",
+    "contact": "Kontakt",
+    "toggleLabel": "Sprache wechseln",
+    "backToTop": "Zurück nach oben"
+  },
+  "sidebar": {
+    "name": "Abdul Khaled Mohebi"
+  },
+  "breadcrumbs": {
+    "home": "Startseite",
+    "story": "Über mich",
+    "services": "Leistungen",
+    "service": "Leistung",
+    "portfolio": "Portfolio",
+    "project": "Projekt",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hi! Ich heiße",
+    "name": "Khaled<br />Jawan",
+    "role": "UI/UX-Designer",
+    "scrollText": " Bitte. Nach. unten. scrollen."
+  },
+  "about": {
+    "title": "Hallo! Ich heiße Khaled,<br />ich bin UI/UX Designer mit Sitz in Deutschland",
+    "description": "Ich bin eine leidenschaftliche und engagierte UI/UX Designer mit einem starken Fokus auf herausragende Nutzererlebnisse. Komplexe Ideen in intuitive und visuell ansprechende Designs zu verwandeln, ist meine Stärke. Mit einem geschulten Blick für Details und einem nutzerzentrierten Ansatz entwickle ich wirkungsvolle Lösungen, die Menschen begeistern. Lass uns gemeinsam deine digitalen Produkte zum Leben erwecken!"
+  },
+  "services": {
+    "sectionTitle": "Leistungen",
+    "uiux": {
+      "title": "UI/UX-Design",
+      "description": "Stärke deine Online-Präsenz mit fesselnden Benutzeroberflächen und nahtlosen Abläufen."
+    },
+    "logo": {
+      "title": "Logo-Design",
+      "description": "Schaffe eine starke und stimmige Markenidentität, die bei deiner Zielgruppe ankommt."
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "Alles mit einem Ziel: Umgebungen zu gestalten, in denen unsere Kundschaft aufblüht."
+    }
+  },
+  "languages": {
+    "sectionTitle": "Sprachkenntnisse",
+    "german": {
+      "label": "Deutsch",
+      "level": "C1"
+    },
+    "english": {
+      "label": "Englisch",
+      "level": "C1"
+    },
+    "french": {
+      "label": "Französisch",
+      "level": "A2"
+    },
+    "persian": {
+      "label": "Persisch",
+      "level": "MS"
+    }
+  },
+  "skills": {
+    "sectionTitle": "Fachkenntnisse",
+    "figma": "Figma",
+    "adobeXd": "Adobe XD",
+    "sketch": "Sketch",
+    "adobeSuite": "Photoshop, Illustrator",
+    "programming": {
+      "label": "Programmierkenntnisse:",
+      "tools": "Python, Java, HTML, CSS, JavaScript"
+    }
+  },
+  "reviews": {
+    "sectionTitle": "Feedback",
+    "natalie": {
+      "name": "Natalie Luckner",
+      "role": "Koordinatorin des Bundesfreiwilligendienstes beim Technischen Hilfswerk",
+      "quote": "Die Zusammenarbeit mit Khaled Jawan als unserer UI-Designerin war eine absolute Freude. Ihr Blick für Details und ihr kreativer Ansatz haben unsere Vision zum Leben erweckt. Die Benutzeroberfläche übertraf unsere Erwartungen und erhielt großartiges Feedback von unseren Kund:innen. Sehr empfehlenswert!"
+    },
+    "saif": {
+      "name": "Saifuddin Sepehr",
+      "role": "CEO, Microcis",
+      "quote": "Ich hatte die Gelegenheit, mit Khaled zusammenzuarbeiten, und sie ist unglaublich talentiert. Ihr Verständnis für unsere Marke und die Umsetzung in eine Benutzeroberfläche waren beeindruckend. Khaleds Designs sind intuitiv und haben das Nutzererlebnis deutlich verbessert. Ich freue mich auf weitere Projekte mit ihr!"
+    },
+    "sanzar": {
+      "name": "Sanzar Kakar",
+      "role": "Chairman, Moore Afghanistan",
+      "quote": "Khaled Jawan ist eine herausragende UI-Designerin. Sie hat ein feines Gespür für Ästhetik und weiß, wie man nutzerfreundliche Interfaces gestaltet. Ihre Entwürfe haben die Bedienbarkeit unserer Anwendung enorm verbessert. Höchste Professionalität und Verlässlichkeit!"
+    },
+    "said": {
+      "name": "Said Jawad Saidi",
+      "role": "Senior Engineer, Huawei",
+      "quote": "Die Zusammenarbeit mit Khaled Jawan als unserer UI-Designerin war großartig. Ihr Blick fürs Detail und ihr kreativer Ansatz haben unsere Vision verwirklicht. Die von ihr gestaltete Benutzeroberfläche hat unsere Erwartungen übertroffen und viel positives Feedback erhalten. Absolut empfehlenswert!"
+    }
+  },
+  "portfolio": {
+    "banner": {
+      "clientLabel": "Kunde:",
+      "client": "Envato",
+      "dateLabel": "Datum:",
+      "date": "Mai 2025",
+      "category": "Branding",
+      "title": "Aevoe. Visuelle Identität"
+    },
+    "intro": "Unsere Stücke – von anspruchsvollen Bürostühlen bis zu vielseitigen Wohnmöbeln – vereinen Stil, Funktionalität und ergonomische Exzellenz. Tauche in das Aevoe-Universum ein und erlebe, wie unsere Möbel deinen Alltag und Arbeitsplatz in elegante, komfortable Räume verwandeln.",
+    "section": {
+      "visualTitle": "Visuelles Identitätsdesign",
+      "visualLead": "Erlebe das Außergewöhnliche mit Aevoe – einer Premium-Einrichtung, die modernes Design mit höchstem Komfort verbindet."
+    },
+    "similar": {
+      "title": "Ähnliche Projekte",
+      "item1": {
+        "category": "Branding",
+        "title": "Doctive"
+      },
+      "item2": {
+        "category": "Branding",
+        "title": "Einzigartiger Kartenhalter"
+      }
+    }
+  },
+  "blog": {
+    "sectionTitle": "Neueste Blogbeiträge",
+    "post1": {
+      "title": "So wirst du in 10 einfachen Schritten Grafikdesigner:in",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos."
+    },
+    "post2": {
+      "title": "16 der besten Online- und Offline-Kurse für Grafikdesign",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos."
+    }
+  },
+  "contact": {
+    "banner": {
+      "title": "Melde dich!"
+    },
+    "section": {
+      "title": "Lass uns sprechen"
+    },
+    "details": {
+      "callLabel": "Anrufen:",
+      "writeLabel": "Schreib an:"
+    },
+    "form": {
+      "namePlaceholder": "Wie heißt du?",
+      "emailPlaceholder": "Deine E-Mail",
+      "messagePlaceholder": "Erzähl mir von deinem Projekt",
+      "notice": "Ich gebe deine personenbezogenen Daten nicht an Dritte weiter.",
+      "submit": "Nachricht senden"
+    }
+  },
+  "service": {
+    "banner": {
+      "title": "UI/UX-Design"
+    },
+    "sections": {
+      "whatIsTitle": "Was ist UI/UX-Design",
+      "processesTitle": "Prozesse",
+      "pricingTitle": "Preise",
+      "reviewsTitle": "Kundenstimmen"
+    },
+    "whatIs": {
+      "description": "UI/UX-Design steht für User Interface/User Experience Design. Es umfasst die Gestaltung von visuell ansprechenden und nutzerfreundlichen Oberflächen für digitale Produkte. UI-Design konzentriert sich auf den Look & Feel eines Produkts, einschließlich Farben, Typografie und Layouts. UX-Design verbessert das gesamte Nutzererlebnis und berücksichtigt Faktoren wie Usability, Zugänglichkeit und Interaktionsdesign. Gemeinsam sorgen UI und UX für intuitive und begeisternde Erlebnisse."
+    },
+    "processes": {
+      "uxAudits": {
+        "title": "UX-Audits",
+        "paragraph1": "Ein UX-Audit bewertet die Nutzererfahrung einer Website. Dabei werden Design, Funktionalität und Inhalte analysiert, um Verbesserungsmöglichkeiten zu finden, die das Gesamterlebnis stärken.",
+        "paragraph2": "Ein Team aus UX-Expert:innen prüft die Website gründlich und erstellt einen detaillierten Bericht mit konkreten Empfehlungen, wie Usability, Zugänglichkeit und Nutzerfreundlichkeit optimiert werden können.",
+        "paragraph3": "Untersucht werden Bereiche wie Navigation, Layout, visuelles Design, Inhaltsstruktur und mobile Responsivität. Ziel ist es, Schmerzpunkte zu identifizieren und umsetzbare Maßnahmen abzuleiten, die das Erlebnis verbessern.",
+        "paragraph4": "Kurz gesagt: Ein UX-Audit hilft Website-Betreiber:innen, Verbesserungen zu erkennen, die die Nutzerzufriedenheit steigern und die Interaktion erhöhen."
+      },
+      "designThinking": {
+        "title": "Design Thinking",
+        "paragraph1": "Design Thinking ist ein problemlösungsorientierter Ansatz, der Empathie, Kreativität und Zusammenarbeit in den Mittelpunkt stellt. Er beginnt damit, die Bedürfnisse der Nutzer:innen zu verstehen, das Problem klar zu definieren, viele Ideen zu entwickeln sowie Prototypen zu testen und anhand von Feedback zu verfeinern.",
+        "paragraph2": "Der Ansatz fördert eine menschenzentrierte Innovation und wird häufig in Produktdesign, UX-Design und Geschäftsstrategien eingesetzt, um nutzerorientierte, innovative Lösungen zu schaffen. Er ermutigt zu Experimenten, Iteration und kontinuierlichem Lernen im gesamten Prozess."
+      },
+      "wireframing": {
+        "title": "Wireframing",
+        "paragraph1": "Wireframing ist ein wichtiger Schritt im Webdesign: Er visualisiert die Struktur einer Website. Mit einfachen Formen und Linien werden Elemente wie Header, Navigation und Inhaltsbereiche skizziert. Wireframes definieren Architektur und Funktionalität, erleichtern die Abstimmung zwischen Design, Entwicklung und Kundschaft und bilden die Grundlage für nutzerfreundliche Websites."
+      },
+      "methodologies": {
+        "title": "Methoden",
+        "paragraph1": "Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae."
+      }
+    },
+    "pricing": {
+      "hourly": {
+        "title": "Stundenhonorar",
+        "price": "$17 <span>/ho</span>",
+        "items": {
+          "0": "Dolorum sed doloribus",
+          "1": "Consectetur adipisicing elit",
+          "2": "Maxime libero",
+          "3": "Atque esse odit",
+          "4": "Laboriosam corporis"
+        }
+      },
+      "monthly": {
+        "title": "Monatspauschale",
+        "price": "$2900 <span>/ho</span>",
+        "items": {
+          "0": "Dolorum sed doloribus",
+          "1": "Consectetur adipisicing elit",
+          "2": "Maxime libero",
+          "3": "Atque esse odit",
+          "4": "Laboriosam corporis"
+        }
+      }
+    },
+    "reviews": {
+      "paul": {
+        "name": "Paul Trueman",
+        "role": "Eqanta App",
+        "quote": "Die Zusammenarbeit mit KhaledJawan Davis als unserer UI-Designerin war großartig. Ihr Blick fürs Detail und ihr kreativer Ansatz haben unsere Vision zum Leben erweckt. Die Benutzeroberfläche übertraf unsere Erwartungen, und auch Kund:innen waren begeistert. Sehr empfehlenswert!"
+      },
+      "olivia": {
+        "name": "Olivia Oldman",
+        "role": "Eqanta App",
+        "quote": "Ich durfte mit KhaledJawan zusammenarbeiten und sie ist unglaublich talentiert. Sie hat unsere Marke verstanden und in eine überzeugende Benutzeroberfläche übersetzt. Ihre Designs sind intuitiv und verbessern das Nutzererlebnis spürbar. Ich freue mich auf weitere Projekte mit ihr!"
+      },
+      "oscar": {
+        "name": "Oscar Newman",
+        "role": "Eqanta App",
+        "quote": "KhaledJawan Davis ist eine außergewöhnliche UI-Designerin. Sie hat ein Auge für Ästhetik und weiß genau, wie man Interfaces gestaltet. Ihre Entwürfe haben die Nutzbarkeit unserer Anwendung enorm gesteigert. Hoch professionell und absolut verlässlich!"
+      }
+    }
+  },
+  "story": {
+    "banner": {
+      "title": "Alles über mich"
+    },
+    "sections": {
+      "educationTitle": "Bildung:",
+      "workTitle": "Beruf:"
+    },
+    "education": {
+      "0": {
+        "title": "UI/UX-Weiterbildung",
+        "dates": "Juli 2025 -<br />laufend",
+        "location": "Mediadesign Hochschule, Düsseldorf",
+        "description": "Ich absolviere derzeit eine UI/UX-Weiterbildung mit den Schwerpunkten Analyse, Konzeptentwicklung, Wireframes, Prototyping, Visual Design, HTML/CSS und Usability-Tests."
+      },
+      "1": {
+        "title": "Deutschsprachkurs",
+        "dates": "Nov 2023 -<br />Juli 2025",
+        "location": "TASI Academy, Trier",
+        "description": "Deutsch bis Niveau C1 – parallel zu meiner Ausbildung an der TASI Academy. So konnte ich Zusammenarbeit und Kommunikation in internationalen Teams stärken."
+      },
+      "2": {
+        "title": "Programming Coach",
+        "dates": "Okt 2021",
+        "location": "ICPC, Moskau",
+        "description": "Coach des ersten afghanischen Uni-Teams bei den ICPC World Finals in Moskau – inklusive Training, Strategie und Wettkampfvorbereitung."
+      },
+      "3": {
+        "title": "Bachelor Informatik",
+        "dates": "Apr 2016 - Feb 2020",
+        "location": "Avicenna Universität, Kabul",
+        "description": "Schwerpunkt auf Algorithmen, Datenstrukturen, Datenbanken und Webentwicklung. Teamprojekte und Code-Reviews haben meine praktischen Skills geschärft."
+      }
+    },
+    "work": {
+      "0": {
+        "title": "Bundesfreiwilligendienst",
+        "dates": "Dez 2024 - laufend",
+        "location": "THW, Trier",
+        "description": "Unterstützung bei Einsätzen und Logistik, Gestaltung von Materialien sowie IT-Support, damit alles reibungslos läuft."
+      },
+      "1": {
+        "title": "UI/UX Designer",
+        "dates": "Dez 2020 -<br />Aug 2021",
+        "location": "Microcis, Kabul",
+        "description": "User Research und Interviews, Informationsarchitektur, User Flows, Low- und Mid-Fidelity-Wireframes, interaktive Prototypen in Figma, konsistentes Designsystem, Usability-Tests und Übergabe an Development inklusive Spezifikationen und Assets."
+      },
+      "2": {
+        "title": "UI/UX Designer",
+        "dates": "Juni 2018 -<br />Dez 2020",
+        "location": "Moore Afghanistan, Kabul",
+        "description": "Nutzerfreundliche Interfaces, Wireframes und interaktive Prototypen, User Research und Tests. Projekte u. a.: Onlinebanking, Ride-Hailing, E-Commerce, Fitness."
+      },
+      "3": {
+        "title": "UI/UX Designer",
+        "dates": "Juli 2015 - Mai 2016",
+        "location": "BlueSonic, Kabul",
+        "description": "Erstellung von Marketing- und Branding-Materialien (Print & Digital), Layout, Typografie, Farbsysteme und Bildbearbeitung. Enge Zusammenarbeit mit Vertrieb und Marketing für zielgruppengerechte Assets."
+      }
+    }
+  },
+  "cta": {
+    "title": "Bereit, deine Ideen zum Leben zu erwecken? Ich helfe dir dabei",
+    "button": "Kontaktiere mich"
+  },
+  "footer": {
+    "copyright": "© 2025. Khaled. Alle Rechte vorbehalten.",
+    "contactCopyright": "© 2025. Khaled Jawan. Alle Rechte vorbehalten.",
+    "serviceCopyright": "© 2025. KhaledJawan. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "visitWebsite": "Website besuchen"
+  }
+}
