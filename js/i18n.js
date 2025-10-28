@@ -4,6 +4,7 @@ const FALLBACK_LANG = 'en';
 const TRANSLATION_PATH = 'i18n';
 
 const translationStore = {};
+let currentLang = DEFAULT_LANG;
 
 const getNestedValue = (object, path) => {
   return path.split('.').reduce((accumulator, key) => {
@@ -65,6 +66,22 @@ const applyTextTranslations = (lang) => {
   }
 };
 
+const handleToggleClick = (event) => {
+  event.preventDefault();
+  currentLang = currentLang === 'de' ? 'en' : 'de';
+  localStorage.setItem('preferredLanguage', currentLang);
+  applyTextTranslations(currentLang);
+};
+
+const bindToggle = () => {
+  const toggle = document.getElementById('langToggle');
+  if (!toggle) {
+    return;
+  }
+  toggle.removeEventListener('click', handleToggleClick);
+  toggle.addEventListener('click', handleToggleClick);
+};
+
 const loadTranslations = async () => {
   await Promise.all(
     SUPPORTED_LANGS.map(async (lang) => {
@@ -91,22 +108,25 @@ const getInitialLanguage = () => {
   return DEFAULT_LANG;
 };
 
-document.addEventListener('DOMContentLoaded', async () => {
+const initTranslations = async () => {
   await loadTranslations();
 
-  let currentLang = getInitialLanguage();
+  currentLang = getInitialLanguage();
   if (!translationStore[currentLang]) {
     currentLang = DEFAULT_LANG;
   }
+  localStorage.setItem('preferredLanguage', currentLang);
   applyTextTranslations(currentLang);
 
-  const toggle = document.getElementById('langToggle');
-  if (toggle) {
-    toggle.addEventListener('click', (event) => {
-      event.preventDefault();
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      localStorage.setItem('preferredLanguage', currentLang);
-      applyTextTranslations(currentLang);
-    });
-  }
+  bindToggle();
+};
+
+document.addEventListener('DOMContentLoaded', initTranslations);
+document.addEventListener('swup:contentReplaced', () => {
+  applyTextTranslations(currentLang);
+  bindToggle();
+});
+document.addEventListener('contentReplaced', () => {
+  applyTextTranslations(currentLang);
+  bindToggle();
 });
