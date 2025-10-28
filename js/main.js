@@ -7,7 +7,81 @@ Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=Mille
 
 p.s. I am available for Freelance hire (UI design, web development). email: miller.themes@gmail.com
 
+
 ------------------------------------------- */
+const LOTTIE_SCRIPT_SRC =
+  "https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js";
+
+let lottieLoadingPromise = null;
+
+const ensureLottie = () => {
+  if (window.lottie) {
+    return Promise.resolve(window.lottie);
+  }
+
+  if (!lottieLoadingPromise) {
+    lottieLoadingPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = LOTTIE_SCRIPT_SRC;
+      script.async = true;
+      script.onload = () => resolve(window.lottie);
+      script.onerror = (error) => {
+        lottieLoadingPromise = null;
+        reject(error);
+      };
+      document.head.appendChild(script);
+    });
+  }
+
+  return lottieLoadingPromise;
+};
+
+const initLottieAnimations = () => {
+  const boxes = document.querySelectorAll(".lottie-box");
+  if (!boxes.length) {
+    return;
+  }
+
+  ensureLottie()
+    .then(() => {
+      boxes.forEach((box) => {
+        if (box._lottieInstance) {
+          return;
+        }
+
+        const path = box.dataset.path;
+        if (!path) {
+          return;
+        }
+
+        const animation = lottie.loadAnimation({
+          container: box,
+          renderer: "svg",
+          loop: true,
+          autoplay: false,
+          path,
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animation.play();
+            } else {
+              animation.stop();
+            }
+          });
+        });
+
+        observer.observe(box);
+        box._lottieObserver = observer;
+        box._lottieInstance = animation;
+      });
+    })
+    .catch((error) => {
+      console.error("Failed to initialise Lottie animations:", error);
+    });
+};
+
 (function () {
   const form = document.getElementById("contactForm");
   const msg = document.getElementById("formMsg");
@@ -48,6 +122,8 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
     }
   });
 })();
+
+document.addEventListener("DOMContentLoaded", initLottieAnimations);
 
 $(function () {
   "use strict";
@@ -451,6 +527,8 @@ $(function () {
     ------------------------------------------------------------
     ----------------------------------------------------------*/
   document.addEventListener("swup:contentReplaced", function () {
+    initLottieAnimations();
+
     $(".mil-navigation , .mil-menu-btn").removeClass("mil-active");
 
     window.scrollTo({
@@ -458,6 +536,7 @@ $(function () {
     });
 
     ScrollTrigger.refresh();
+    requestAnimationFrame(() => initLottieAnimations());
 
     /***************************
 
