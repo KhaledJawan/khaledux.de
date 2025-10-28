@@ -142,7 +142,7 @@ $(function () {
       "#swupMenu",
     ],
     animateHistoryBrowsing: true,
-    linkSelector: "a:not([data-no-swup])",
+    linkSelector: 'a:not([data-no-swup]):not([target="_blank"])',
     plugins: [new SwupBodyClassPlugin()],
   };
   const swup = new Swup(options);
