@@ -1,3 +1,4 @@
+const ASSET_VERSION = '20240625';
 const SUPPORTED_LANGS = ['de', 'en'];
 const DEFAULT_LANG = 'de';
 const FALLBACK_LANG = 'en';
@@ -87,7 +88,9 @@ const loadTranslations = async () => {
     SUPPORTED_LANGS.map(async (lang) => {
       if (translationStore[lang]) return;
       try {
-        const response = await fetch(`${TRANSLATION_PATH}/${lang}.json`);
+        const response = await fetch(
+          `${TRANSLATION_PATH}/${lang}.json?v=${ASSET_VERSION}`
+        );
         if (!response.ok) {
           throw new Error(`Failed to load translation for ${lang}`);
         }
