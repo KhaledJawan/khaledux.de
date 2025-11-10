@@ -73,13 +73,13 @@
   },
   "skills": {
     "sectionTitle": "Hard Skills",
-    "figma": "Figma",
-    "adobeXd": "Adobe XD",
-    "sketch": "Sketch",
-    "adobeSuite": "Photoshop, Illustrator",
+    "figma": "Design",
+    "adobeXd": "Figma · Adobe XD · Adobe Suite (Ai, Ps, Ae)",
+    "sketch": "Frontend",
+    "adobeSuite": "React · TypeScript · JavaScript <br/>Tailwind · HTML · CSS",
     "programming": {
-      "label": "Programming skills:",
-      "tools": "Python, Java, HTML, CSS, JavaScript"
+      "label": "Tools:",
+      "tools": "Git · Github · VS Code · Jira · Notion"
     }
   },
   "reviews": {
@@ -199,24 +199,24 @@
     "pricing": {
       "hourly": {
         "title": "Hourly payment",
-        "price": "$17 <span>/ho</span>",
+        "price": "€65 <span><br/>/Hour</span>",
         "items": {
-          "0": "Dolorum sed doloribus",
-          "1": "Consectetur adipisicing elit",
-          "2": "Maxime libero",
-          "3": "Atque esse odit",
-          "4": "Laboriosam corporis"
+          "0": "Clean, modern UI",
+          "1": "Functional React build",
+          "2": "API integration included",
+          "3": "Prototype before coding",
+          "4": "Fast, clear collaboration"
         }
       },
       "monthly": {
         "title": "Monthly payment",
-        "price": "$2900 <span>/ho</span>",
+        "price": "€5800 <span>/Month</span>",
         "items": {
-          "0": "Dolorum sed doloribus",
-          "1": "Consectetur adipisicing elit",
-          "2": "Maxime libero",
-          "3": "Atque esse odit",
-          "4": "Laboriosam corporis"
+          "0": "All hourly services",
+          "1": "+",
+          "2": "continuous support",
+          "3": "& priority response",
+          "4": "Fast, clear collaboration"
         }
       }
     },
@@ -274,10 +274,10 @@
     },
     "work": {
       "0": {
-        "title": "Federal Volunteer Service",
-        "dates": "Dec 2024 - Ongoing",
-        "location": "THW, Trier",
-        "description": "Supported deployments and logistics, created graphics and materials, and handled IT/support to keep operations smooth."
+        "title": "UI/UX Designer & Frontend Developer",
+        "dates": "Oct 2022 - Ongoing",
+        "location": "Freelance, Germany",
+        "description": "End-to-end UX/UI design and frontend development of digital products (Web & Mobile), in close collaboration with product managers and development teams. Experience across educational platforms, e-commerce systems, and AI-assisted trading tools. Design systems, user flows, wireframing and high-fidelity prototyping (Figma / Adobe XD). Frontend development with React, including API integration (REST / GraphQL) and state management."
       },
       "1": {
         "title": "UI/UX Designer",

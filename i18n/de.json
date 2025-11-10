@@ -72,14 +72,14 @@
     }
   },
   "skills": {
-    "sectionTitle": "Fachkenntnisse",
-    "figma": "Figma",
-    "adobeXd": "Adobe XD",
-    "sketch": "Sketch",
-    "adobeSuite": "Photoshop, Illustrator",
+    "sectionTitle": "Fachkenntniss:",
+    "figma": "Design",
+    "adobeXd": "Figma · Adobe XD · Adobe Suite (Ai, Ps, Ae)",
+    "sketch": "Frontend:",
+    "adobeSuite": "React · TypeScript · JavaScript <br/>Tailwind · HTML · CSS",
     "programming": {
-      "label": "Programmierkenntnisse:",
-      "tools": "Python, Java, HTML, CSS, JavaScript"
+      "label": "Tools:",
+      "tools": "Git · Github · VS Code · Jira · Notion"
     }
   },
   "reviews": {
@@ -198,25 +198,25 @@
     },
     "pricing": {
       "hourly": {
-        "title": "Stundenhonorar",
-        "price": "$17 <span>/ho</span>",
+        "title": "Stundensatz",
+        "price": "€65 <span><br/>/Std</span>",
         "items": {
-          "0": "Dolorum sed doloribus",
-          "1": "Consectetur adipisicing elit",
-          "2": "Maxime libero",
-          "3": "Atque esse odit",
-          "4": "Laboriosam corporis"
+          "0": "Modernes, klares UI",
+          "1": "Funktionale React-Umsetzung",
+          "2": "API-Anbindung inklusive",
+          "3": "Prototypen vor Entwicklung",
+          "4": "Schnelle, transparente Zusammenarbeit"
         }
       },
       "monthly": {
-        "title": "Monatspauschale",
-        "price": "$2900 <span>/ho</span>",
+        "title": "Monatliche Pakete",
+        "price": "€5800 <span>/Monat</span>",
         "items": {
-          "0": "Dolorum sed doloribus",
-          "1": "Consectetur adipisicing elit",
-          "2": "Maxime libero",
-          "3": "Atque esse odit",
-          "4": "Laboriosam corporis"
+          "0": "Enthält alles aus dem Stundenpaket",
+          "1": "+",
+          "2": "laufende Betreuung,",
+          "3": "schnellere Umsetzung",
+          "4": "und Prioritätsverfügbarkeit."
         }
       }
     },
@@ -274,10 +274,10 @@
     },
     "work": {
       "0": {
-        "title": "Bundesfreiwilligendienst",
-        "dates": "Dez 2024 - laufend",
-        "location": "THW, Trier",
-        "description": "Unterstützung bei Einsätzen und Logistik, Gestaltung von Materialien sowie IT-Support, damit alles reibungslos läuft."
+        "title": "UI/UX Designer & Frontend Developer ",
+        "dates": "Oct 2022 - laufend",
+        "location": "Freelanceer, Deutschland",
+        "description": "End-to-End Gestaltung und Frontend-Entwicklung digitaler Produkte (Web & App) in enger Zusammenarbeit mit Produkt- und Entwicklerteams. Bildungsplattformen, E-Commerce & AI-gestützte Trading-Tools. Design-Systeme & Prototyping (Figma/Adobe XD). Frontend-Entwicklung inkl. API-Integration (REST/GraphQL) & State-Management"
       },
       "1": {
         "title": "UI/UX Designer",
