@@ -1,4 +1,5 @@
 const ASSET_VERSION = '20240702';
+const CACHE_BUSTER = Date.now().toString(); // force fresh translations after deploying content tweaks
 const SUPPORTED_LANGS = ['de', 'en'];
 const DEFAULT_LANG = 'de';
 const FALLBACK_LANG = 'en';
@@ -83,14 +84,18 @@ const bindToggle = () => {
   toggle.addEventListener('click', handleToggleClick);
 };
 
+const getTranslationUrl = (lang) => {
+  return `${TRANSLATION_PATH}/${lang}.json?v=${ASSET_VERSION}&cb=${CACHE_BUSTER}`;
+};
+
 const loadTranslations = async () => {
   await Promise.all(
     SUPPORTED_LANGS.map(async (lang) => {
       if (translationStore[lang]) return;
       try {
-        const response = await fetch(
-          `${TRANSLATION_PATH}/${lang}.json?v=${ASSET_VERSION}`
-        );
+        const response = await fetch(getTranslationUrl(lang), {
+          cache: 'reload',
+        });
         if (!response.ok) {
           throw new Error(`Failed to load translation for ${lang}`);
         }
