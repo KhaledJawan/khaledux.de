@@ -28,14 +28,14 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "greeting": "Hi! Ich heiße",
+    "greeting": "Hi! Ich bin",
     "name": "Khaled<br />Jawan",
     "role": "UI/UX-Designer",
     "scrollText": " Bitte. Nach. unten. scrollen."
   },
   "about": {
     "title": "Hallo! Ich heiße Khaled,<br />ich bin UI/UX Designer mit Sitz in Deutschland",
-    "description": "Ich bin eine leidenschaftliche und engagierte UI/UX Designer mit einem starken Fokus auf herausragende Nutzererlebnisse. Komplexe Ideen in intuitive und visuell ansprechende Designs zu verwandeln, ist meine Stärke. Mit einem geschulten Blick für Details und einem nutzerzentrierten Ansatz entwickle ich wirkungsvolle Lösungen, die Menschen begeistern. Lass uns gemeinsam deine digitalen Produkte zum Leben erwecken!"
+    "description": "Ich bin UI/UX Designer und Frontend-Entwickler mit Erfahrung in der Gestaltung und Umsetzung moderner digitaler Produkte für Web und Mobile. Mein Fokus liegt auf nutzerzentrierten Interfaces, klaren Informationsstrukturen und konsistenten Design-Systemen. Durch meine Kenntnisse in React und zeitgemäßen Frontend-Technologien bin ich in der Lage, Designs nicht nur zu konzipieren, sondern auch in funktionale, performante und skalierbare Benutzeroberflächen umzusetzen. Ich arbeite strukturiert, iterativ und eng mit Entwicklerteams zusammen, um hochwertige und verständliche User Experiences zu schaffen."
   },
   "services": {
     "sectionTitle": "Leistungen",
@@ -108,16 +108,16 @@
   "portfolio": {
     "banner": {
       "clientLabel": "Kunde:",
-      "client": "Envato",
+      "client": "Moore Afghanistan & Microcis",
       "dateLabel": "Datum:",
-      "date": "Mai 2025",
-      "category": "Branding",
-      "title": "Aevoe. Visuelle Identität"
+      "date": "2018 - 2021",
+      "category": "Mobile & Web UI/UX Design",
+      "title": "Ausgewählte Projekte"
     },
-    "intro": "Unsere Stücke – von anspruchsvollen Bürostühlen bis zu vielseitigen Wohnmöbeln – vereinen Stil, Funktionalität und ergonomische Exzellenz. Tauche in das Aevoe-Universum ein und erlebe, wie unsere Möbel deinen Alltag und Arbeitsplatz in elegante, komfortable Räume verwandeln.",
+    "intro": "Buber war die erste mobile Ride-Hailing-Plattform, die gezielt für den sozialen und kulturellen Kontext Afghanistans entwickelt wurde. Da viele Menschen in Afghanistan eine gewisse Zurückhaltung gegenüber neuer Technologie haben, musste das Produkt besonders klar, vertrauenswürdig und einfach bedienbar sein. Mein Fokus im Designprozess lag auf: <br/> Sehr einfachen Interaktionsabläufen (wenige Schritte & klare Symbole). <br/>Sicherheit und Transparenz (Fahrerprofil & Routenübersicht). <br/>Interfaces, die auch bei geringer digitaler Erfahrung und instabiler Netzabdeckung gut funktionieren. <br/> Durch diesen Ansatz wurde Buber für eine breite Nutzerschaft zugänglich – einschließlich Menschen mit wenig Smartphone-Erfahrung. Die Plattform stärkte das Vertrauen in digitale Dienstleistungen und trug zur frühen Entwicklung app-basierter Mobilitätsangebote in Afghanistan bei.",
     "section": {
-      "visualTitle": "Visuelles Identitätsdesign",
-      "visualLead": "Erlebe das Außergewöhnliche mit Aevoe – einer Premium-Einrichtung, die modernes Design mit höchstem Komfort verbindet."
+      "visualTitle": "Mini-Apps",
+      "visualLead": "Mini-Apps für den Alltag — wie Zahlungen, Restaurantbestellungen und Unternehmensservices — gestaltet für Einfachheit, Zugänglichkeit und schnelle, intuitive Interaktionen."
     },
     "similar": {
       "title": "Ähnliche Projekte",

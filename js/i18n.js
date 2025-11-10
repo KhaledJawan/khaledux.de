@@ -1,4 +1,4 @@
-const ASSET_VERSION = '20240719';
+const ASSET_VERSION = '20240723';
 const CACHE_BUSTER = Date.now().toString(); // force fresh translations after deploying content tweaks
 const SUPPORTED_LANGS = ['de', 'en'];
 const DEFAULT_LANG = 'de';
