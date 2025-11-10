@@ -1053,6 +1053,32 @@ frame
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.mil-consent-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(32, 33, 36);
+}
+.mil-consent-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  border: 1px solid rgba(32, 33, 36, 0.2);
+}
+.mil-consent-check input[type="checkbox"]:focus-visible {
+  outline: 2px solid rgba(76, 175, 80, 0.8);
+  outline-offset: 2px;
+}
+.mil-form-msg {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .mil-chat-launch {
     right: 16px;

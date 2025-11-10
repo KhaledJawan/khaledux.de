@@ -156,12 +156,17 @@
     },
     "form": {
       "namePlaceholder": "What's your name",
-      "emailPlaceholder": "Your Email",
-      "messagePlaceholder": "Tell me about our project",
-      "notice": "Your personal information will not be shared.",
-      "submit": "Send message"
-    }
-  },
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Tell me about our project",
+    "notice": "Your personal information will not be shared.",
+    "consentLabel": "I agree that my personal data (name, email, message) may be processed so you can respond to my inquiry (DSGVO consent).",
+    "msgFill": "Please fill out all fields.",
+    "msgSuccess": "Thanks! Your message has been sent.",
+    "msgError": "Something went wrong. Please try again.",
+    "msgNetwork": "Network error. Please try again later.",
+    "submit": "Send message"
+  }
+},
   "service": {
     "banner": {
       "title": "UI/UX Design"

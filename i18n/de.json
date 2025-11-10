@@ -156,12 +156,17 @@
     },
     "form": {
       "namePlaceholder": "Wie heißt du?",
-      "emailPlaceholder": "Deine E-Mail",
-      "messagePlaceholder": "Erzähl mir von deinem Projekt",
-      "notice": "Deine Daten bleiben vertraulich.",
-      "submit": "Nachricht senden"
-    }
-  },
+    "emailPlaceholder": "Deine E-Mail",
+    "messagePlaceholder": "Erzähl mir von deinem Projekt",
+    "notice": "Deine Daten bleiben vertraulich.",
+    "consentLabel": "Ich stimme zu, dass meine personenbezogenen Daten (Name, E-Mail, Nachricht) zur Beantwortung meiner Anfrage verarbeitet werden dürfen (DSGVO-Einwilligung).",
+    "msgFill": "Bitte fülle alle Felder aus.",
+    "msgSuccess": "Danke! Deine Nachricht wurde gesendet.",
+    "msgError": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "msgNetwork": "Netzwerkfehler. Bitte versuche es später erneut.",
+    "submit": "Nachricht senden"
+  }
+},
   "service": {
     "banner": {
       "title": "UI/UX-Design"

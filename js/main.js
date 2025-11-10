@@ -89,8 +89,21 @@ const initLottieAnimations = () => {
   function showMsg(text, ok = true) {
     msg.textContent = text;
     msg.style.display = "block";
-    msg.style.color = ok ? "#10b981" : "#ef4444"; // سبز/قرمز
+    msg.style.color = ok ? "#10b981" : "#ef4444"; // green/red
   }
+
+  const defaultMessages = {
+    fill: "Please fill out all fields.",
+    success: "Thanks! Your message has been sent.",
+    error: "Something went wrong. Please try again.",
+    network: "Network error. Please try again later.",
+  };
+  const getMsg = (key) => {
+    if (!form) return defaultMessages[key];
+    const marker = form.querySelector(`[data-form-msg="${key}"]`);
+    const text = marker?.textContent?.trim();
+    return text || defaultMessages[key];
+  };
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -99,9 +112,9 @@ const initLottieAnimations = () => {
     const email = form.email.value.trim();
     const message = form.message.value.trim();
 
-    if (honey) return; // اسپم
+    if (honey) return; // spam
     if (!name || !email || !message) {
-      showMsg("لطفاً همهٔ فیلدها را پر کنید.", false);
+      showMsg(getMsg("fill"), false);
       return;
     }
 
@@ -112,13 +125,13 @@ const initLottieAnimations = () => {
         body: new FormData(form),
       });
       if (res.ok) {
-        showMsg("ممنون! پیام شما ارسال شد.");
+        showMsg(getMsg("success"));
         form.reset();
       } else {
-        showMsg("اشکال در ارسال. دوباره تلاش کنید.", false);
+        showMsg(getMsg("error"), false);
       }
     } catch (err) {
-      showMsg("خطای شبکه. بعداً دوباره تلاش کنید.", false);
+      showMsg(getMsg("network"), false);
     }
   });
 })();

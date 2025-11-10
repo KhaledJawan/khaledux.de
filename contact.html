@@ -260,13 +260,13 @@
               </form>
             </div> -->
             <div id="contact" class="mil-p-90-60">
-              <form
-                id="contactForm"
-                class="row align-items-center"
-                action="https://formspree.io/f/xvgvklka"
-                method="POST"
-                novalidate
-              >
+      <form
+        id="contactForm"
+        class="row align-items-center"
+        action="https://formspree.io/f/xvgvklka"
+        method="POST"
+        novalidate
+      >
                 <!-- honeypot ضد اسپم -->
                 <input
                   type="text"
@@ -316,6 +316,21 @@
                   <p id="formMsg" class="mil-up" style="display: none"></p>
                 </div>
 
+                <div class="col-lg-8">
+                  <label class="mil-consent-check mil-up mil-mb-30" for="consentCheckbox">
+                    <input
+                      type="checkbox"
+                      id="consentCheckbox"
+                      name="consent"
+                      required
+                    />
+                    <span data-i18n="contact.form.consentLabel">
+                      I agree that my personal data may be processed to respond
+                      to my inquiry (DSGVO consent).
+                    </span>
+                  </label>
+                </div>
+
                 <div class="col-lg-4">
                   <div class="mil-adaptive-right mil-up mil-mb-30">
                     <button type="submit" class="mil-btn mil-sm-btn">
@@ -323,6 +338,27 @@
                     </button>
                   </div>
                 </div>
+
+                <span
+                  class="mil-form-msg"
+                  data-form-msg="fill"
+                  data-i18n="contact.form.msgFill"
+                ></span>
+                <span
+                  class="mil-form-msg"
+                  data-form-msg="success"
+                  data-i18n="contact.form.msgSuccess"
+                ></span>
+                <span
+                  class="mil-form-msg"
+                  data-form-msg="error"
+                  data-i18n="contact.form.msgError"
+                ></span>
+                <span
+                  class="mil-form-msg"
+                  data-form-msg="network"
+                  data-i18n="contact.form.msgNetwork"
+                ></span>
               </form>
             </div>
 
