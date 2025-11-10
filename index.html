@@ -63,14 +63,24 @@
                   <a data-i18n="nav.services" href="service.html">Service</a>
                 </li>
                 <li class="mil-has-children">
-                  <a data-i18n="nav.contact" href="contact.html">Contact</a>
+                  <a
+                    data-i18n="nav.contact"
+                    href="contact.html"
+                    data-chat-trigger="true"
+                  >
+                    Contact
+                  </a>
                 </li>
               </ul>
             </nav>
           </div>
 
           <div class="mil-top-panel-btns">
-            <a href="contact.html" class="mil-contact-btn">
+            <a
+              href="contact.html"
+              class="mil-contact-btn"
+              data-chat-trigger="true"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -872,13 +882,15 @@
                       Ready to bring your ideas to life? I'm here to help
                     </h2>
                     <div class="mil-up">
-                      <a
-                        href="contact.html"
+                      <button
+                        id="openChatButton"
+                        type="button"
                         class="mil-btn mil-sm-btn"
                         data-i18n="cta.button"
+                        data-chat-trigger="true"
                       >
                         Contact me
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -972,6 +984,45 @@
     <!-- Khaled js -->
     <script src="js/main.js?v=20240723"></script>
 
+    <div
+      class="mil-chat-widget"
+      id="chatWidget"
+      role="dialog"
+      aria-live="polite"
+      aria-hidden="true"
+    >
+      <div class="mil-chat-header">
+        <div>
+          <p class="mil-chat-title">Chat with Khaled</p>
+          <p class="mil-chat-subtitle">AI assistant</p>
+        </div>
+        <button
+          type="button"
+          class="mil-chat-close"
+          id="chatCloseButton"
+          aria-label="Close chat"
+        >
+          ×
+        </button>
+      </div>
+      <div class="mil-chat-messages" id="chatMessages">
+        <div class="mil-chat-message mil-chat-message--bot">
+          Hi! I’m Khaled’s assistant. How can I help with your project today?
+        </div>
+      </div>
+      <form class="mil-chat-input" id="chatForm">
+        <input
+          type="text"
+          id="chatInput"
+          name="message"
+          placeholder="Write your message..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="mil-chat-send">Send</button>
+      </form>
+    </div>
+
     <a
       id="langToggle"
       href="#"
@@ -981,5 +1032,89 @@
     >
       <span id="langLabel" class="mil-lang-floating__label">EN</span>
     </a>
+    <script>
+      (function () {
+        const widget = document.getElementById('chatWidget');
+        const closeBtn = document.getElementById('chatCloseButton');
+        const form = document.getElementById('chatForm');
+        const input = document.getElementById('chatInput');
+        const messages = document.getElementById('chatMessages');
+        const triggers = document.querySelectorAll('[data-chat-trigger]');
+
+        if (!widget || !closeBtn || !form || !input || !messages) {
+          return;
+        }
+
+        const setVisibility = (isVisible) => {
+          widget.classList.toggle('is-visible', isVisible);
+          widget.setAttribute('aria-hidden', String(!isVisible));
+          if (isVisible) {
+            input.focus();
+          }
+        };
+
+        const appendMessage = (text, isBot = false) => {
+          const bubble = document.createElement('div');
+          bubble.className = `mil-chat-message ${
+            isBot ? 'mil-chat-message--bot' : 'mil-chat-message--user'
+          }`;
+          bubble.textContent = text;
+          messages.appendChild(bubble);
+          messages.scrollTop = messages.scrollHeight;
+        };
+
+        triggers.forEach((trigger) => {
+          trigger.addEventListener('click', (event) => {
+            event.preventDefault();
+            setVisibility(true);
+          });
+        });
+
+        closeBtn.addEventListener('click', () => setVisibility(false));
+
+        const showBotPlaceholder = (text = '...') => {
+          const bubble = document.createElement('div');
+          bubble.className = 'mil-chat-message mil-chat-message--bot';
+          bubble.dataset.status = 'pending';
+          bubble.textContent = text;
+          messages.appendChild(bubble);
+          messages.scrollTop = messages.scrollHeight;
+          return bubble;
+        };
+
+        const API_BASE = 'http://localhost:4000';
+
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const value = input.value.trim();
+          if (!value) {
+            return;
+          }
+          appendMessage(value, false);
+          input.value = '';
+          const pendingBubble = showBotPlaceholder('Typing…');
+          try {
+            const response = await fetch(`${API_BASE}/api/chat`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ message: value }),
+            });
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            pendingBubble.textContent =
+              data?.reply?.trim() ||
+              "Thanks for reaching out! I'll review your message and respond shortly.";
+            delete pendingBubble.dataset.status;
+          } catch (error) {
+            console.error(error);
+            pendingBubble.textContent =
+              'Sorry, I could not reach the assistant. Please try again.';
+            delete pendingBubble.dataset.status;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -818,6 +818,121 @@ frame
     font-size: 12px;
   }
 }
+.mil-chat-widget {
+  position: fixed;
+  right: 30px;
+  bottom: 120px;
+  width: 320px;
+  max-width: calc(100vw - 40px);
+  background: rgb(15, 15, 17);
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 998;
+}
+.mil-chat-widget.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.mil-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mil-chat-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.mil-chat-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+.mil-chat-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.mil-chat-close:hover {
+  color: #fff;
+}
+.mil-chat-messages {
+  padding: 16px 20px;
+  overflow-y: auto;
+  max-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mil-chat-message {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.mil-chat-message--bot {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  align-self: flex-start;
+}
+.mil-chat-message--user {
+  background: rgb(76, 175, 80);
+  color: #0b160d;
+  align-self: flex-end;
+}
+.mil-chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mil-chat-input input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 13px;
+}
+.mil-chat-input input:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+}
+.mil-chat-send {
+  border: none;
+  border-radius: 999px;
+  padding: 0 18px;
+  background: rgb(76, 175, 80);
+  color: #0b160d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+.mil-chat-send:hover {
+  filter: brightness(1.1);
+}
+@media screen and (max-width: 768px) {
+  .mil-chat-widget {
+    right: 16px;
+    left: 16px;
+    width: auto;
+    bottom: 100px;
+  }
+}
 .mil-top-panel .mil-top-panel-btns .mil-contact-btn:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
