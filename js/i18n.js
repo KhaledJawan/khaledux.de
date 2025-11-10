@@ -1,4 +1,4 @@
-const ASSET_VERSION = '20240625';
+const ASSET_VERSION = '20240702';
 const SUPPORTED_LANGS = ['de', 'en'];
 const DEFAULT_LANG = 'de';
 const FALLBACK_LANG = 'en';
