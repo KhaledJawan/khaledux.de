@@ -77,26 +77,29 @@
 
           <div class="mil-top-panel-btns">
             <a
-              href="contact.html"
+              href="#"
+              class="mil-logo"
+              id="langToggle"
+              aria-label="Switch language"
+              data-i18n-attr="aria-label:nav.toggleLabel"
+              ><span data-i18n="nav.lanText"></span
+            ></a>
+            <!-- <button
+              type="button"
               class="mil-contact-btn"
-              data-chat-trigger="true"
+              id="langToggle"
+              aria-label="Switch language"
+              data-i18n-attr="aria-label:nav.toggleLabel"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-mail"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                ></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </a>
+              <picture class="mil-contact-icon">
+                <source
+                  srcset="/img/icons/de-en-bl.svg"
+                  media="(max-width: 1200px)"
+                />
+                <img src="/img/icons/de-en.svg" alt="Language toggle" />
+              </picture>
+              <span id="langLabel" class="mil-lang-sr-only">EN</span>
+            </button> -->
 
             <div class="mil-menu-btn">
               <span></span>
@@ -983,46 +986,10 @@
     <script src="js/i18n.js?v=20240723"></script>
     <!-- Khaled js -->
     <script src="js/main.js?v=20240723"></script>
+    <!-- chat widget js -->
+    <script src="js/chat.js?v=20240723"></script>
 
-    <div
-      class="mil-chat-widget"
-      id="chatWidget"
-      role="dialog"
-      aria-live="polite"
-      aria-hidden="true"
-    >
-      <div class="mil-chat-header">
-        <div>
-          <p class="mil-chat-title">Chat with Khaled</p>
-          <p class="mil-chat-subtitle">AI assistant</p>
-        </div>
-        <button
-          type="button"
-          class="mil-chat-close"
-          id="chatCloseButton"
-          aria-label="Close chat"
-        >
-          ×
-        </button>
-      </div>
-      <div class="mil-chat-messages" id="chatMessages">
-        <div class="mil-chat-message mil-chat-message--bot">
-          Hi! I’m Khaled’s assistant. How can I help with your project today?
-        </div>
-      </div>
-      <form class="mil-chat-input" id="chatForm">
-        <input
-          type="text"
-          id="chatInput"
-          name="message"
-          placeholder="Write your message..."
-          autocomplete="off"
-          required
-        />
-        <button type="submit" class="mil-chat-send">Send</button>
-      </form>
-    </div>
-
+    <!--
     <a
       id="langToggle"
       href="#"
@@ -1032,89 +999,6 @@
     >
       <span id="langLabel" class="mil-lang-floating__label">EN</span>
     </a>
-    <script>
-      (function () {
-        const widget = document.getElementById('chatWidget');
-        const closeBtn = document.getElementById('chatCloseButton');
-        const form = document.getElementById('chatForm');
-        const input = document.getElementById('chatInput');
-        const messages = document.getElementById('chatMessages');
-        const triggers = document.querySelectorAll('[data-chat-trigger]');
-
-        if (!widget || !closeBtn || !form || !input || !messages) {
-          return;
-        }
-
-        const setVisibility = (isVisible) => {
-          widget.classList.toggle('is-visible', isVisible);
-          widget.setAttribute('aria-hidden', String(!isVisible));
-          if (isVisible) {
-            input.focus();
-          }
-        };
-
-        const appendMessage = (text, isBot = false) => {
-          const bubble = document.createElement('div');
-          bubble.className = `mil-chat-message ${
-            isBot ? 'mil-chat-message--bot' : 'mil-chat-message--user'
-          }`;
-          bubble.textContent = text;
-          messages.appendChild(bubble);
-          messages.scrollTop = messages.scrollHeight;
-        };
-
-        triggers.forEach((trigger) => {
-          trigger.addEventListener('click', (event) => {
-            event.preventDefault();
-            setVisibility(true);
-          });
-        });
-
-        closeBtn.addEventListener('click', () => setVisibility(false));
-
-        const showBotPlaceholder = (text = '...') => {
-          const bubble = document.createElement('div');
-          bubble.className = 'mil-chat-message mil-chat-message--bot';
-          bubble.dataset.status = 'pending';
-          bubble.textContent = text;
-          messages.appendChild(bubble);
-          messages.scrollTop = messages.scrollHeight;
-          return bubble;
-        };
-
-        const API_BASE = 'http://localhost:4000';
-
-        form.addEventListener('submit', async (event) => {
-          event.preventDefault();
-          const value = input.value.trim();
-          if (!value) {
-            return;
-          }
-          appendMessage(value, false);
-          input.value = '';
-          const pendingBubble = showBotPlaceholder('Typing…');
-          try {
-            const response = await fetch(`${API_BASE}/api/chat`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ message: value }),
-            });
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            pendingBubble.textContent =
-              data?.reply?.trim() ||
-              "Thanks for reaching out! I'll review your message and respond shortly.";
-            delete pendingBubble.dataset.status;
-          } catch (error) {
-            console.error(error);
-            pendingBubble.textContent =
-              'Sorry, I could not reach the assistant. Please try again.';
-            delete pendingBubble.dataset.status;
-          }
-        });
-      })();
-    </script>
+    -->
   </body>
 </html>
