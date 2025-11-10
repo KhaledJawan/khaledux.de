@@ -157,7 +157,7 @@
       "namePlaceholder": "What's your name",
       "emailPlaceholder": "Your Email",
       "messagePlaceholder": "Tell me about our project",
-      "notice": "I promise not to disclose your personal information to third parties.",
+      "notice": "Your personal information will not be shared.",
       "submit": "Send message"
     }
   },
