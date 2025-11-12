@@ -141,6 +141,25 @@ document.addEventListener("DOMContentLoaded", initLottieAnimations);
 $(function () {
   "use strict";
 
+  const scrollToHash = () => {
+    const { hash } = window.location;
+    if (!hash) {
+      return false;
+    }
+    const target = document.querySelector(hash);
+    if (!target) {
+      return false;
+    }
+    const offset = 120;
+    const top =
+      target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+    return true;
+  };
+
   /***************************
 
     swup
@@ -544,9 +563,11 @@ $(function () {
 
     $(".mil-navigation , .mil-menu-btn").removeClass("mil-active");
 
-    window.scrollTo({
-      top: 0,
-    });
+    if (!scrollToHash()) {
+      window.scrollTo({
+        top: 0,
+      });
+    }
 
     ScrollTrigger.refresh();
     requestAnimationFrame(() => initLottieAnimations());
@@ -822,4 +843,6 @@ $(function () {
       };
     }
   });
+
+  scrollToHash();
 });

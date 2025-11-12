@@ -74,10 +74,15 @@
               href="#"
               class="mil-logo"
               id="langToggle"
+              data-lang-toggle="true"
               aria-label="Switch language"
               data-i18n-attr="aria-label:nav.toggleLabel"
             >
-              <span id="langLabel" data-i18n="nav.lanText"></span>
+              <span
+                id="langLabel"
+                data-lang-label="true"
+                data-i18n="nav.lanText"
+              ></span>
             </a>
 
             <div class="mil-menu-btn">
@@ -541,16 +546,14 @@
     <!-- chat widget js -->
     <script src="js/chat.js?v=20240723"></script>
 
-    <!--
     <a
-      id="langToggle"
       href="#"
       class="mil-lang-floating"
+      data-lang-toggle="true"
       aria-label="Switch language"
       data-i18n-attr="aria-label:nav.toggleLabel"
     >
-      <span id="langLabel" class="mil-lang-floating__label">EN</span>
+      <span class="mil-lang-floating__label" data-lang-label="true">EN</span>
     </a>
-    -->
   </body>
 </html>

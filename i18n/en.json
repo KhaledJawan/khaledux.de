@@ -200,6 +200,58 @@
       "methodologies": {
         "title": "Methodologies",
         "paragraph1": "Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae."
+      },
+      "brandDiscovery": {
+        "title": "1- Brand Discovery",
+        "body": "Brand Discovery is the phase where we learn about your business, your users, and your goals. We identify what makes your brand unique and define the direction for the entire project.<br />Output: Brand Brief (1–2 pages) <br />Time: 7 days out of 100 days (Project X)"
+      },
+      "brandIdentity": {
+        "title": "2- Brand Identity",
+        "body": "Brand Identity defines the personality and voice of your brand. We decide how the brand should feel — friendly, professional, playful, or elegant — so that communication stays consistent everywhere.<br />Output: Brand Personality + Tone of Voice (1–2 pages) <br />Time: 6 days out of 100 days (Project X)"
+      },
+      "logoDesign": {
+        "title": "3- Logo Design",
+        "body": "Logo Design is where we create the visual symbol of your brand. We start with sketching multiple concepts, refine the strongest one, and finalize it in different formats for all use cases.<br />Output: Final Logo + Variations (Color, Black/White, Icon) <br />Time: 8 days out of 100 days (Project X)"
+      },
+      "brandGuidelines": {
+        "title": "4- Brand Guidelines",
+        "body": "Brand Guidelines define how your brand should look and be used. This includes colors, fonts, logo rules, icons, image style, and spacing. It ensures your brand always appears consistent — no matter who designs what.<br />Output: Brand Book (PDF with rules & visual standards) <br />Time: 9 days out of 100 days (Project X)"
+      },
+      "informationArchitecture": {
+        "title": "5- Information Architecture",
+        "body": "Information Architecture defines how content and pages are organized. We plan the sitemap and user flows so users can easily find what they need without confusion.<br />Output: Sitemap + User Flow Diagram <br />Time: 5 days out of 100 days (Project X)"
+      },
+      "contentStrategy": {
+        "title": "6- Content Strategy",
+        "body": "Content Strategy defines what each page should say and how it should communicate. We clarify the main message, key headlines, and structure of text — so users understand the product clearly and quickly.<br />Output: Page Messaging + Core Copy Direction (1–2 pages per main section) <br />Time: 5 days out of 100 days (Project X)"
+      },
+      "wireframes": {
+        "title": "7- Wireframes",
+        "body": "Wireframes are simple, black-and-white layouts that show the structure of each screen without colors or visual styling. This step helps us confirm layout, placement, and flow before spending time on detailed design.<br />Output: Low-Fidelity Wireframes for all key pages <br />Time: 10 days out of 100 days (Project X)"
+      },
+      "uiDesign": {
+        "title": "8- UI Design",
+        "body": "UI Design is where we create the final visual look of the product. We apply colors, typography, spacing, icons, components, and the brand style to each page. This step makes the product visually clear, modern, and consistent.<br />Output: High-Fidelity UI Designs for all main screens + UI Style Components <br />Time: 20 days out of 100 days (Project X)"
+      },
+      "prototype": {
+        "title": "9- Prototype",
+        "body": "The prototype is an interactive, clickable version of the design. It allows you and real users to experience the flow of the product before development begins.<br />Output: Clickable Figma Prototype <br />Time: 7 days out of 100 days (Project X)"
+      },
+      "usabilityTesting": {
+        "title": "10- Usability Testing",
+        "body": "Usability Testing checks how real users interact with the prototype. We observe where they struggle and make improvements to ensure the experience is clear and easy to use.<br />Output: Test Report + List of Improvements <br />Time: 6 days out of 100 days (Project X)"
+      },
+      "designSystem": {
+        "title": "11- Design System & UI Kit",
+        "body": "The Design System & UI Kit is a library of reusable visual components (buttons, inputs, icons, spacing rules, etc.). It ensures consistency and allows developers to work faster and with fewer errors.<br />Output: UI Component Library + Design Rules Document <br />Time: 8 days out of 100 days (Project X)"
+      },
+      "developerHandoff": {
+        "title": "12- Developer Handoff",
+        "body": "Developer handoff is where we prepare and organize all design files so the development team can build the product correctly. We provide assets, specifications, component behaviors, and clear instructions to avoid misunderstandings.<br />Output: Organized Figma Files + Exported Assets + Implementation Notes <br />Time: 5 days out of 100 days (Project X)"
+      },
+      "postLaunch": {
+        "title": "13- Post-Launch Optimization",
+        "body": "Post-launch optimization happens after the product goes live. We review real user behavior, identify any usability issues, and make small improvements to enhance the experience.<br />Output: Analytics Report + List of UX Improvements + Updated Screens (if needed) <br />Time: 4 days out of 100 days (Project X)"
       }
     },
     "pricing": {

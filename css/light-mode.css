@@ -787,48 +787,56 @@ frame
 }
 .mil-lang-floating {
   position: fixed;
-  right: 30px;
+  left: 30px;
   bottom: 30px;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   border-radius: 999px;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(32, 33, 36)), to(rgb(48, 50, 55)));
-  background: linear-gradient(90deg, rgb(32, 33, 36), rgb(48, 50, 55));
   border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgb(32, 33, 36);
   color: rgb(255, 255, 255);
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 13px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
-  -webkit-transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+  -webkit-transition: -webkit-transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, -webkit-transform 0.2s ease;
   z-index: 999;
 }
 .mil-lang-floating:hover {
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgb(45, 46, 50);
 }
 .mil-lang-floating__label {
   display: inline-block;
   padding: 0 6px;
 }
+@media screen and (max-width: 1200px) {
+  .mil-lang-floating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mil-top-panel #langToggle {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .mil-lang-floating {
-    right: 20px;
-    bottom: 20px;
-    width: 62px;
-    height: 62px;
+    left: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
     font-size: 12px;
   }
 }
@@ -1517,19 +1525,19 @@ frame
   width: 100%;
 }
 .mil-content .mil-scroll-wrapper .mil-container {
-  overflow: hidden;
+  overflow: visible;
   padding-right: 90px;
   padding-left: 90px;
   width: calc(63% + 1px);
 }
 .mil-content .mil-scroll-wrapper .mil-container-fw {
-  overflow: hidden;
+  overflow: visible;
   padding-left: 15%;
   padding-right: calc(15% + 90px);
   width: 100%;
 }
 .mil-content .mil-scroll-wrapper .mil-container-100 {
-  overflow: hidden;
+  overflow: visible;
   padding-left: 90px;
   padding-right: 90px;
   width: 100%;
@@ -1568,6 +1576,7 @@ right banner
 .mil-right-banner {
   position: fixed;
   overflow: hidden;
+  top: 90px;
   right: 0;
   width: 35%;
   height: calc(100vh - 90px);
@@ -3101,6 +3110,32 @@ footer a:hover {
 }
 footer a:hover:after {
   width: 100%;
+}
+footer.mil-fw {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.mil-scroll-wrapper .mil-fw {
+  margin-left: -90px;
+  margin-right: -90px;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+@media screen and (max-width: 1200px) {
+  .mil-scroll-wrapper .mil-fw {
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mil-scroll-wrapper .mil-fw {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media screen and (max-width: 1200px) {
   footer {

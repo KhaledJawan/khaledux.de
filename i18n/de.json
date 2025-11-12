@@ -200,6 +200,58 @@
       "methodologies": {
         "title": "Methoden",
         "paragraph1": "Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae."
+      },
+      "brandDiscovery": {
+        "title": "1- Brand Discovery",
+        "body": "Brand Discovery ist die Phase, in der wir dein Unternehmen, deine Nutzer:innen und Ziele wirklich kennenlernen. Wir finden heraus, was deine Marke einzigartig macht und legen damit die Richtung für das gesamte Projekt fest.<br />Output: Brand-Briefing (1–2 Seiten) <br />Zeit: 7 Tage von 100 Tagen (Project X)"
+      },
+      "brandIdentity": {
+        "title": "2- Brand Identity",
+        "body": "Brand Identity definiert die Persönlichkeit und Stimme deiner Marke. Wir legen fest, ob sie freundlich, professionell, verspielt oder elegant wirken soll, damit die Kommunikation überall konsistent bleibt.<br />Output: Markenpersönlichkeit + Tonalität (1–2 Seiten) <br />Zeit: 6 Tage von 100 Tagen (Project X)"
+      },
+      "logoDesign": {
+        "title": "3- Logo-Design",
+        "body": "Logo-Design ist die Phase, in der wir das visuelle Symbol deiner Marke entwickeln. Wir skizzieren mehrere Konzepte, schleifen die stärkste Idee und finalisieren sie in allen Formaten für jeden Einsatz.<br />Output: Finale Logos + Varianten (Farbe, Schwarz/Weiß, Icon) <br />Zeit: 8 Tage von 100 Tagen (Project X)"
+      },
+      "brandGuidelines": {
+        "title": "4- Brand Guidelines",
+        "body": "Brand Guidelines legen fest, wie deine Marke aussieht und eingesetzt wird. Dazu gehören Farben, Schriften, Logoregeln, Icons, Bildstil und Abstände, damit die Marke immer konsistent erscheint – unabhängig davon, wer gestaltet.<br />Output: Brand Book (PDF mit Regeln & visuellen Standards) <br />Zeit: 9 Tage von 100 Tagen (Project X)"
+      },
+      "informationArchitecture": {
+        "title": "5- Informationsarchitektur",
+        "body": "Informationsarchitektur beschreibt, wie Inhalte und Seiten strukturiert sind. Wir planen Sitemap und User Flows, damit Nutzer:innen ohne Umwege finden, was sie brauchen.<br />Output: Sitemap + User-Flow-Diagramm <br />Zeit: 5 Tage von 100 Tagen (Project X)"
+      },
+      "contentStrategy": {
+        "title": "6- Content-Strategie",
+        "body": "Content-Strategie definiert, was jede Seite kommunizieren soll. Wir schärfen Kernbotschaft, Überschriften und Textstruktur, damit der Mehrwert sofort verständlich wird.<br />Output: Seitenbotschaften + Copy-Richtung (1–2 Seiten pro Bereich) <br />Zeit: 5 Tage von 100 Tagen (Project X)"
+      },
+      "wireframes": {
+        "title": "7- Wireframes",
+        "body": "Wireframes sind einfache schwarz-weiße Layouts, die den Aufbau jeder Seite ohne visuelles Styling zeigen. So bestätigen wir schnell Aufbau, Platzierung und Fluss, bevor wir Zeit in detailliertes Design investieren.<br />Output: Low-Fidelity-Wireframes für alle Kernseiten <br />Zeit: 10 Tage von 100 Tagen (Project X)"
+      },
+      "uiDesign": {
+        "title": "8- UI Design",
+        "body": "Im UI Design entsteht der finale Look des Produkts. Wir wenden Farben, Typografie, Abstände, Icons, Komponenten und den Markenstil auf jede Seite an, damit alles klar, modern und konsistent wirkt.<br />Output: High-Fidelity-UI-Screens + UI-Stilkomponenten <br />Zeit: 20 Tage von 100 Tagen (Project X)"
+      },
+      "prototype": {
+        "title": "9- Prototyp",
+        "body": "Der Prototyp ist eine interaktive, klickbare Version des Designs. So können du und echte Nutzer:innen die Abläufe erleben, bevor die Entwicklung startet.<br />Output: Klickbarer Figma-Prototyp <br />Zeit: 7 Tage von 100 Tagen (Project X)"
+      },
+      "usabilityTesting": {
+        "title": "10- Usability Testing",
+        "body": "Usability-Tests zeigen, wie echte Nutzer:innen mit dem Prototyp interagieren. Wir beobachten Hürden und optimieren den Ablauf, bis alles verständlich und leicht zu bedienen ist.<br />Output: Testbericht + Liste der Verbesserungen <br />Zeit: 6 Tage von 100 Tagen (Project X)"
+      },
+      "designSystem": {
+        "title": "11- Design System & UI Kit",
+        "body": "Das Design System & UI Kit ist eine Bibliothek wiederverwendbarer Komponenten (Buttons, Eingaben, Icons, Abstände usw.). Es sorgt für Konsistenz und ermöglicht schnelleres, fehlerfreies Arbeiten im Team.<br />Output: UI-Komponentenbibliothek + Design-Regelwerk <br />Zeit: 8 Tage von 100 Tagen (Project X)"
+      },
+      "developerHandoff": {
+        "title": "12- Übergabe an die Entwicklung",
+        "body": "Bei der Übergabe an die Entwicklung bereiten wir alle Design-Dateien so auf, dass das Produkt exakt umgesetzt werden kann. Wir liefern Assets, Spezifikationen, Komponentenverhalten und klare Anweisungen, um Missverständnisse zu vermeiden.<br />Output: Organisierte Figma-Dateien + exportierte Assets + Umsetzungshinweise <br />Zeit: 5 Tage von 100 Tagen (Project X)"
+      },
+      "postLaunch": {
+        "title": "13- Optimierung nach dem Launch",
+        "body": "Die Optimierung nach dem Launch startet, sobald das Produkt live ist. Wir beobachten echtes Nutzerverhalten, identifizieren UX-Probleme und nehmen gezielte Anpassungen für ein besseres Erlebnis vor.<br />Output: Analyse-Report + Liste der UX-Verbesserungen + aktualisierte Screens (falls nötig) <br />Zeit: 4 Tage von 100 Tagen (Project X)"
       }
     },
     "pricing": {

@@ -62,10 +62,11 @@ const applyTextTranslations = (lang) => {
     document.title = pageTitle;
   }
 
-  const langLabel = document.getElementById('langLabel');
-  if (langLabel) {
-    langLabel.textContent = lang === 'en' ? 'DE' : 'EN';
-  }
+  document
+    .querySelectorAll('[data-lang-label]')
+    .forEach((label) => {
+      label.textContent = lang === 'en' ? 'DE' : 'EN';
+    });
 };
 
 const handleToggleClick = (event) => {
@@ -76,12 +77,14 @@ const handleToggleClick = (event) => {
 };
 
 const bindToggle = () => {
-  const toggle = document.getElementById('langToggle');
-  if (!toggle) {
+  const toggles = document.querySelectorAll('[data-lang-toggle]');
+  if (!toggles.length) {
     return;
   }
-  toggle.removeEventListener('click', handleToggleClick);
-  toggle.addEventListener('click', handleToggleClick);
+  toggles.forEach((toggle) => {
+    toggle.removeEventListener('click', handleToggleClick);
+    toggle.addEventListener('click', handleToggleClick);
+  });
 };
 
 const getTranslationUrl = (lang) => {

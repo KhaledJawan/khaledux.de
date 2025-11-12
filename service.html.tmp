@@ -198,10 +198,7 @@
 
             <div class="mil-section-title mil-up mil-mb-90">
               <div class="mil-divider"></div>
-              <h3
-                id="service-what-is"
-                data-i18n="service.sections.whatIsTitle"
-              >
+              <h3 id="service-what-is" data-i18n="service.sections.whatIsTitle">
                 What is UI/UX Design
               </h3>
             </div>
@@ -239,11 +236,7 @@
               <div class="row justify-content-center">
                 <div class="col-lg-12">
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.brandDiscovery.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.brandDiscovery.title">1- Brand Discovery</h6><p class="mil-accordion-head">
                         1- Brand Discovery
                       </p>
 
@@ -269,11 +262,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.brandIdentity.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.brandIdentity.title">2- Brand Identity</h6><p class="mil-accordion-head">
                         2- Brand Identity
                       </p>
 
@@ -297,12 +286,9 @@
                       </p>
                     </div>
                   </div>
-                  <div class="mil-accordion-group mil-up" id="service-logo-design">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.logoDesign.title"
-                      >
+
+                  <div class="mil-accordion-group mil-up">
+                    <div class="mil-accordion-menu"><h6 id="service-logo-design" data-i18n="service.processes.logoDesign.title">3- Logo Design</h6><p class="mil-accordion-head">
                         3- Logo Design
                       </p>
 
@@ -327,12 +313,9 @@
                       </p>
                     </div>
                   </div>
-                  <div class="mil-accordion-group mil-up" id="service-branding">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.brandGuidelines.title"
-                      >
+
+                  <div class="mil-accordion-group mil-up">
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.brandGuidelines.title">4- Brand Guidelines</h6><p class="mil-accordion-head">
                         4- Brand Guidelines
                       </p>
 
@@ -359,11 +342,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.informationArchitecture.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.informationArchitecture.title">5- Information Architecture</h6><p class="mil-accordion-head">
                         5- Information Architecture
                       </p>
 
@@ -388,11 +367,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.contentStrategy.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.contentStrategy.title">6- Content Strategy</h6><p class="mil-accordion-head">
                         6- Content Strategy
                       </p>
 
@@ -419,11 +394,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.wireframes.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.wireframes.title">7- Wireframes</h6><p class="mil-accordion-head">
                         7- Wireframes
                       </p>
 
@@ -448,12 +419,8 @@
                     </div>
                   </div>
 
-                  <div class="mil-accordion-group mil-up" id="service-ui-design">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.uiDesign.title"
-                      >
+                  <div class="mil-accordion-group mil-up">
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.uiDesign.title">8- UI Design</h6><p class="mil-accordion-head">
                         8- UI Design
                       </p>
 
@@ -481,11 +448,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.prototype.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.prototype.title">9- Prototype</h6><p class="mil-accordion-head">
                         9- Prototype
                       </p>
 
@@ -510,11 +473,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.usabilityTesting.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.usabilityTesting.title">10- Usability Testing</h6><p class="mil-accordion-head">
                         10- Usability Testing
                       </p>
 
@@ -540,11 +499,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.designSystem.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.designSystem.title">11- Design System & UI Kit</h6><p class="mil-accordion-head">
                         11- Design System & UI Kit
                       </p>
 
@@ -570,11 +525,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.developerHandoff.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.developerHandoff.title">12- Developer Handoff</h6><p class="mil-accordion-head">
                         12- Developer Handoff
                       </p>
 
@@ -602,11 +553,7 @@
                   </div>
 
                   <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.postLaunch.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.postLaunch.title">13- Post-Launch Optimization</h6><p class="mil-accordion-head">
                         13- Post-Launch Optimization
                       </p>
 
@@ -633,11 +580,7 @@
                   </div>
 
                   <!-- <div class="mil-accordion-group mil-up">
-                    <div class="mil-accordion-menu">
-                      <p
-                        class="mil-accordion-head"
-                        data-i18n="service.processes.designThinking.title"
-                      >
+                    <div class="mil-accordion-menu"><h6 data-i18n="service.processes.designThinking.title">Design thinking</h6><p class="mil-accordion-head">
                         Design thinking
                       </p>
 
