@@ -1,4 +1,10 @@
 (function () {
+  function shouldAutoOpenChat() {
+    if (localStorage.getItem("ai_chat_opened")) return false;
+    localStorage.setItem("ai_chat_opened", "true");
+    return true;
+  }
+
   function getWebsiteLanguage() {
     // اگر i18n داری
     if (window.i18n && window.i18n.language) {
@@ -42,6 +48,9 @@
   let hasRenderedGreeting = false;
   let elements = {};
   // const messages = [{ role: "system", content: SYSTEM_PROMPT }];
+
+  const WELCOME_MESSAGE =
+    "Hi! I’m Khaled AI 🤖 Ask me anything about Khaled’s projects, skills, or collaborations.";
 
   let messages = [
     {

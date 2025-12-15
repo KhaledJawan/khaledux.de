@@ -31,12 +31,12 @@
   "hero": {
     "greeting": "Hi! Ich bin",
     "name": "Khaled<br />Jawan",
-    "role": "UI/UX-Designer",
+    "role": "Product Designer (UX/UI) · Frontend Developer",
     "scrollText": " Bitte. Nach. unten. scrollen."
   },
   "about": {
-    "title": "Hallo! Ich heiße Khaled,<br />ich bin UI/UX Designer mit Sitz in Deutschland",
-    "description": "Ich bin UI/UX Designer und Frontend-Entwickler mit Erfahrung in der Gestaltung und Umsetzung moderner digitaler Produkte für Web und Mobile. Mein Fokus liegt auf nutzerzentrierten Interfaces, klaren Informationsstrukturen und konsistenten Design-Systemen. Durch meine Kenntnisse in React und zeitgemäßen Frontend-Technologien bin ich in der Lage, Designs nicht nur zu konzipieren, sondern auch in funktionale, performante und skalierbare Benutzeroberflächen umzusetzen. Ich arbeite strukturiert, iterativ und eng mit Entwicklerteams zusammen, um hochwertige und verständliche User Experiences zu schaffen."
+    "title": "Hallo! Ich heiße Khaled,<br />ich bin Product Designer (UX/UI) & Frontend Developer mit Sitz in Deutschland",
+    "description": "Produktdesigner & Frontend Developer mit einem Informatik-Background, Deutsch C1 und über 5 Jahren Erfahrung in der Gestaltung und Entwicklung digitaler Produkte in den Bereichen Bildung, E-Commerce, FinTech und Sprachlern-Apps. Expertise in der Leitung von UX/UI-Prozessen, dem Aufbau von Designsystemen sowie der Umsetzung moderner Frontends (React, TypeScript, Flutter). Starke technische Kompetenz, belegt durch die Teilnahme an den ICPC World Finals als Coach und einer formalen UX-Weiterbildung in Deutschland."
   },
   "services": {
     "sectionTitle": "Leistungen",
@@ -156,17 +156,17 @@
     },
     "form": {
       "namePlaceholder": "Wie heißt du?",
-    "emailPlaceholder": "Deine E-Mail",
-    "messagePlaceholder": "Erzähl mir von deinem Projekt",
-    "notice": "Deine Daten bleiben vertraulich.",
-    "consentLabel": "Ich stimme zu, dass meine personenbezogenen Daten (Name, E-Mail, Nachricht) zur Beantwortung meiner Anfrage verarbeitet werden dürfen (DSGVO-Einwilligung).",
-    "msgFill": "Bitte fülle alle Felder aus.",
-    "msgSuccess": "Danke! Deine Nachricht wurde gesendet.",
-    "msgError": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
-    "msgNetwork": "Netzwerkfehler. Bitte versuche es später erneut.",
-    "submit": "Nachricht senden"
-  }
-},
+      "emailPlaceholder": "Deine E-Mail",
+      "messagePlaceholder": "Erzähl mir von deinem Projekt",
+      "notice": "Deine Daten bleiben vertraulich.",
+      "consentLabel": "Ich stimme zu, dass meine personenbezogenen Daten (Name, E-Mail, Nachricht) zur Beantwortung meiner Anfrage verarbeitet werden dürfen (DSGVO-Einwilligung).",
+      "msgFill": "Bitte fülle alle Felder aus.",
+      "msgSuccess": "Danke! Deine Nachricht wurde gesendet.",
+      "msgError": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "msgNetwork": "Netzwerkfehler. Bitte versuche es später erneut.",
+      "submit": "Nachricht senden"
+    }
+  },
   "service": {
     "banner": {
       "title": "UI/UX-Design"

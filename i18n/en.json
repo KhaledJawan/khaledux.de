@@ -31,12 +31,12 @@
   "hero": {
     "greeting": "Hi! I'm",
     "name": "Khaled<br />Jawan",
-    "role": "UI/UX Designer",
+    "role": "Product Designer (UX/UI) · Frontend Developer",
     "scrollText": "Scroll down - Scroll down -"
   },
   "about": {
-    "title": "Hi! My name is Khaled,<br />I'm a UI/UX Designer based in Germany",
-    "description": "I am a UI/UX designer and frontend developer with experience in designing and implementing modern digital products for web and mobile. My focus is on user-centered interfaces, clear information architecture, and consistent design systems. With my background in React and contemporary frontend technologies, I am able not only to design interfaces but also to translate them into functional, high-performance, and scalable user experiences. I work in a structured and iterative way and collaborate closely with development teams to deliver high-quality, intuitive digital products."
+    "title": "Hi! My name is Khaled,<br />I'm a Product Designer (UX/UI) & Frontend Developer based in Germany",
+    "description": "Product Designer & Frontend Developer with a Computer Science background, C1 German level, and 5+ years of experience designing and developing digital products across education, e-commerce, fintech, and language-learning. Skilled in leading UX/UI processes, building design systems, and implementing modern frontends (React, TypeScript, Flutter). Strong technical understanding demonstrated through ICPC World Finals participation as a coach and formal UX Weiterbildung in Germany."
   },
   "services": {
     "sectionTitle": "Services",
@@ -156,17 +156,17 @@
     },
     "form": {
       "namePlaceholder": "What's your name",
-    "emailPlaceholder": "Your Email",
-    "messagePlaceholder": "Tell me about our project",
-    "notice": "Your personal information will not be shared.",
-    "consentLabel": "I agree that my personal data (name, email, message) may be processed so you can respond to my inquiry (DSGVO consent).",
-    "msgFill": "Please fill out all fields.",
-    "msgSuccess": "Thanks! Your message has been sent.",
-    "msgError": "Something went wrong. Please try again.",
-    "msgNetwork": "Network error. Please try again later.",
-    "submit": "Send message"
-  }
-},
+      "emailPlaceholder": "Your Email",
+      "messagePlaceholder": "Tell me about our project",
+      "notice": "Your personal information will not be shared.",
+      "consentLabel": "I agree that my personal data (name, email, message) may be processed so you can respond to my inquiry (DSGVO consent).",
+      "msgFill": "Please fill out all fields.",
+      "msgSuccess": "Thanks! Your message has been sent.",
+      "msgError": "Something went wrong. Please try again.",
+      "msgNetwork": "Network error. Please try again later.",
+      "submit": "Send message"
+    }
+  },
   "service": {
     "banner": {
       "title": "UI/UX Design"

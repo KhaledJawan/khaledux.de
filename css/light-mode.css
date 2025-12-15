@@ -987,6 +987,8 @@ frame
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.5;
   font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
 }
 .mil-chat-bubble--user {
   background: linear-gradient(135deg, rgb(76, 175, 80), rgb(129, 199, 132));
@@ -1025,6 +1027,13 @@ frame
   color: #fff;
   font-size: 14px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.mil-chat-input input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: none;
+  letter-spacing: 0;
 }
 .mil-chat-input input:focus {
   outline: none;
