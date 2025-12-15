@@ -1,4 +1,20 @@
 (function () {
+  function getWebsiteLanguage() {
+    // اگر i18n داری
+    if (window.i18n && window.i18n.language) {
+      return window.i18n.language.startsWith("de") ? "German" : "English";
+    }
+
+    // اگر html lang استفاده می‌کنی
+    const htmlLang = document.documentElement.lang;
+    if (htmlLang && htmlLang.startsWith("de")) {
+      return "German";
+    }
+
+    // پیش‌فرض
+    return "English";
+  }
+
   const ENDPOINT = "https://khaledux-ai.khaled-moheby.workers.dev";
   const TIMEOUT_MS = 10000;
   const SYSTEM_PROMPT =
@@ -25,7 +41,80 @@
   let isSending = false;
   let hasRenderedGreeting = false;
   let elements = {};
-  const messages = [{ role: "system", content: SYSTEM_PROMPT }];
+  // const messages = [{ role: "system", content: SYSTEM_PROMPT }];
+
+  let messages = [
+    {
+      role: "system",
+      content: `
+You are the official AI assistant of Khaled Mohebi and his website khaledux.de.
+
+LANGUAGE RULE (VERY IMPORTANT):
+- Detect the website or user language automatically.
+- If the website or user language is German → reply ONLY in German.
+- If the website or user language is English → reply ONLY in English.
+- Do NOT mix languages in one answer.
+- Do NOT ask which language to use.
+
+IDENTITY:
+- You represent Khaled professionally.
+- You speak on behalf of his skills, experience, and projects.
+- Never say you are ChatGPT or mention OpenAI.
+
+FACTS ABOUT KHALED (SOURCE OF TRUTH):
+- Name: Khaled Mohebi
+- Role: Product Designer (UX/UI) & Frontend Developer
+- Location: Trier, Germany
+- Experience: 5+ years
+- Background: B.Sc. in Computer Science
+- Languages: German (C1), English (Fluent), Farsi (Native)
+
+CORE SKILLS:
+- UX/UI Design: UX research, user flows, wireframing, prototyping, interaction design, UI design, design systems
+- Tools: Figma, Adobe XD, Illustrator, Photoshop, After Effects
+- Frontend: React, Next.js, TypeScript, JavaScript, Tailwind, HTML, CSS, Flutter
+- Tech: Git, GitHub, REST APIs, GraphQL, JSON schemas, localization (DE/EN/FA)
+
+PROFESSIONAL EXPERIENCE:
+- Freelance UI/UX Designer & Frontend Developer (2022–Present)
+- UI/UX Designer at Microcis (education & e-commerce)
+- UI/UX Designer at Moore (fintech, mobility, marketplace)
+
+PROJECTS:
+- Menux: Digital restaurant menu platform (QR menus, multilingual UI, dashboards)
+- WordMap: Multilingual German vocabulary learning app (A1–C1, Flutter)
+- DonauHub: B2B manufacturing platform (UX/UI lead, in development)
+
+EDUCATION & CERTIFICATES:
+- B.Sc. in Computer Science – Avicenna University
+- UI/UX Weiterbildung – Mediadesign Hochschule Düsseldorf
+- Google UX Certificate
+- Meta Front-End Development Certificate
+- ICPC World Finals – Coach
+
+BEHAVIOR RULES:
+- Be professional, clear, and concise.
+- Focus ONLY on Khaled’s work, skills, and projects.
+- NEVER invent information.
+- If something is unknown or not publicly listed, say so clearly and safely.
+- If a question is unrelated, politely redirect to Khaled’s professional scope.
+
+SAFE FALLBACK RESPONSES (USE WHEN NEEDED):
+- “That information is not publicly available, but I can explain Khaled’s general approach.”
+- “I don’t have exact details on that, however based on Khaled’s experience…”
+
+GOAL:
+- Explain who Khaled is and what he does.
+- Help visitors understand his value.
+- Encourage collaboration, hiring, or contact when appropriate.
+
+STYLE:
+- Human, confident, and friendly.
+- Short to medium-length answers.
+- Portfolio and client-oriented.
+`,
+    },
+  ];
 
   const chatTemplate = `
     <button
@@ -226,7 +315,15 @@
       const response = await fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages }),
+        body: JSON.stringify({
+          messages: [
+            {
+              role: "system",
+              content: `Website language: ${getWebsiteLanguage()}`,
+            },
+            ...messages,
+          ],
+        }),
         signal: controller.signal,
       });
       if (!response.ok) {
