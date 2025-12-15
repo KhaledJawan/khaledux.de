@@ -931,6 +931,12 @@ frame
   flex-direction: column;
   min-height: 0;
 }
+.mil-chat-disclaimer {
+  margin: 0;
+  padding: 8px 24px 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
 .mil-chat-messages {
   flex: 1;
   min-height: 0;
