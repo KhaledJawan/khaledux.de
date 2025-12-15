@@ -259,14 +259,9 @@ STYLE:
       isAssistant ? "mil-chat-bubble--bot" : "mil-chat-bubble--user"
     }`;
 
-    const author = document.createElement("span");
-    author.className = "mil-chat-author";
-    author.textContent = isAssistant ? "AI" : "You";
-
     const textElement = document.createElement("p");
     textElement.textContent = text;
 
-    bubble.appendChild(author);
     bubble.appendChild(textElement);
     row.appendChild(avatar);
     row.appendChild(bubble);
