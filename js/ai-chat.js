@@ -26,10 +26,10 @@
   const SYSTEM_PROMPT =
     "You are Khaled's AI assistant for khaledux.de. Be concise and helpful.";
   const WELCOME_MESSAGE =
-    "Hi! I’m Khaled AI 🤖 Ask me anything about Khaled’s projects, skills, or collaborations.";
+    "Hi! I’m Khaled AI, Lets talk about Khaled's work and projects. How can I assist you?";
 
-  const INITIAL_ASSISTANT_MESSAGE =
-    "Hi! I'm Khaled's assistant. How can I help with your project today?";
+  // const INITIAL_ASSISTANT_MESSAGE =
+  //   "Hi! I'm Khaled's assistant. How can I help with your project today?";
   const ERROR_MESSAGE =
     "Sorry, I could not reach the assistant. Please try again.";
   const FALLBACK_REPLY =
