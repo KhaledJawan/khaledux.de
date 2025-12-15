@@ -25,6 +25,9 @@
   const TIMEOUT_MS = 10000;
   const SYSTEM_PROMPT =
     "You are Khaled's AI assistant for khaledux.de. Be concise and helpful.";
+  const WELCOME_MESSAGE =
+    "Hi! I’m Khaled AI 🤖 Ask me anything about Khaled’s projects, skills, or collaborations.";
+
   const INITIAL_ASSISTANT_MESSAGE =
     "Hi! I'm Khaled's assistant. How can I help with your project today?";
   const ERROR_MESSAGE =
@@ -48,9 +51,6 @@
   let hasRenderedGreeting = false;
   let elements = {};
   // const messages = [{ role: "system", content: SYSTEM_PROMPT }];
-
-  const WELCOME_MESSAGE =
-    "Hi! I’m Khaled AI 🤖 Ask me anything about Khaled’s projects, skills, or collaborations.";
 
   let messages = [
     {
