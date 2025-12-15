@@ -27,9 +27,7 @@
     "You are Khaled's AI assistant for khaledux.de. Be concise and helpful.";
   const WELCOME_MESSAGE =
     "Hi! I’m Khaled AI, Lets talk about Khaled's work and projects. How can I assist you?";
-
-  // const INITIAL_ASSISTANT_MESSAGE =
-  //   "Hi! I'm Khaled's assistant. How can I help with your project today?";
+  const INITIAL_ASSISTANT_MESSAGE = WELCOME_MESSAGE;
   const ERROR_MESSAGE =
     "Sorry, I could not reach the assistant. Please try again.";
   const FALLBACK_REPLY =
