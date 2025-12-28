@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="is-animating">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,1002 +13,546 @@
     <link rel="stylesheet" href="css/plugins/swiper.min.css?v=20240905" />
     <!-- Khaled css -->
     <link rel="stylesheet" href="css/light-mode.css?v=20251217" />
-    <!-- page name -->
+
     <title>Khaled Jawan</title>
+
+    <style>
+      :root {
+        --kh-white: #f7f3ee;
+        --kh-dark: #0b0c0f;
+        --kh-glass: rgba(255, 255, 255, 0.14);
+        --kh-glass-border: rgba(255, 255, 255, 0.22);
+        --kh-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--kh-dark);
+      }
+
+      .kh-hero {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: clamp(16px, 3vw, 56px);
+        color: var(--kh-white);
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      @supports (height: 100svh) {
+        .kh-hero {
+          min-height: 100svh;
+        }
+      }
+
+      .kh-hero__bg {
+        position: absolute;
+        inset: 0;
+        background: url("/img/photobgfine.jpg") center/cover no-repeat;
+        z-index: 0;
+      }
+
+      .kh-hero__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(6, 8, 12, 0.55) 0%,
+          rgba(6, 8, 12, 0.35) 45%,
+          rgba(6, 8, 12, 0.75) 100%
+        );
+        z-index: 1;
+      }
+
+      .kh-topbar {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .kh-logo {
+        color: var(--kh-white);
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .kh-nav {
+        display: flex;
+        gap: clamp(16px, 2vw, 32px);
+      }
+
+      .kh-nav a {
+        color: var(--kh-white);
+        text-decoration: none;
+        font-size: 13px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      .kh-menu-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 999px;
+        border: 1px solid var(--kh-glass-border);
+        background: var(--kh-glass);
+        color: var(--kh-white);
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .kh-menu-btn svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        stroke-width: 2;
+        fill: none;
+      }
+
+      .kh-mobile-menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        background: rgba(11, 12, 15, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        padding: 12px 14px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 180px;
+        backdrop-filter: blur(12px);
+        z-index: 4;
+      }
+
+      .kh-mobile-menu.is-open {
+        display: flex;
+      }
+
+      .kh-mobile-menu a {
+        color: var(--kh-white);
+        text-decoration: none;
+        font-size: 13px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 6px 4px;
+      }
+
+      .kh-hero__content {
+        position: relative;
+        z-index: 2;
+        align-self: center;
+        max-width: 560px;
+      }
+
+      .kh-hero__title {
+        margin: 0 0 12px;
+        font-size: clamp(48px, 9vw, 92px);
+        line-height: 0.95;
+        color: var(--kh-white);
+      }
+
+      .kh-hero__role {
+        margin: 0;
+        font-size: clamp(14px, 2.2vw, 20px);
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .kh-hero__actions {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .kh-cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        width: min(520px, 100%);
+      }
+
+      .kh-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .kh-btn--primary {
+        background: var(--kh-white);
+        color: var(--kh-dark);
+        box-shadow: var(--kh-shadow);
+      }
+
+      .kh-btn--ghost {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: var(--kh-white);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .kh-chat-bar {
+        width: min(520px, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--kh-white);
+        background: var(--kh-glass);
+        border: 1px solid var(--kh-glass-border);
+        backdrop-filter: blur(12px);
+      }
+
+      .kh-chat-bar__send {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.32);
+      }
+
+      .kh-chat-bar__send svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        stroke-width: 2;
+        fill: none;
+      }
+
+      .kh-social-stack {
+        position: absolute;
+        right: clamp(16px, 3vw, 40px);
+        bottom: clamp(120px, 20vh, 180px);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 3;
+      }
+
+      .kh-social-stack a {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--kh-white);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        font-size: 18px;
+      }
+
+      .kh-hero a:focus-visible,
+      .kh-hero button:focus-visible,
+      .kh-chat-section a:focus-visible {
+        outline: 2px solid var(--kh-white);
+        outline-offset: 3px;
+      }
+
+      .kh-chat-section {
+        padding: clamp(40px, 6vw, 80px);
+        background: #f7f3ee;
+        color: #1b1b1b;
+      }
+
+      .kh-chat-section__inner {
+        max-width: 720px;
+        margin: 0 auto;
+        display: grid;
+        gap: 16px;
+      }
+
+      .kh-chat-section__inner h2 {
+        margin: 0;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+
+      .kh-chat-section__inner p {
+        margin: 0;
+        color: rgba(27, 27, 27, 0.7);
+      }
+
+      .mil-chat-launch {
+        display: none !important;
+      }
+
+      @media (max-width: 768px) {
+        .kh-nav {
+          display: none;
+        }
+
+        .kh-menu-btn {
+          display: inline-flex;
+        }
+
+        .kh-hero__content {
+          align-self: end;
+          padding-bottom: 10px;
+        }
+
+        .kh-hero__actions {
+          gap: 10px;
+        }
+
+        .kh-cta-buttons {
+          width: 100%;
+        }
+
+        .kh-btn {
+          flex: 1 1 160px;
+        }
+
+        .kh-chat-bar {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .kh-hero__actions {
+          align-items: flex-start;
+        }
+
+        .kh-cta-buttons {
+          justify-content: flex-start;
+        }
+
+        .kh-social-stack {
+          bottom: clamp(40px, 7vh, 120px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .kh-btn {
+          transition: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <!-- wrapper -->
-    <div class="mil-wrapper" id="top">
-      <!-- preloader -->
-      <div class="mil-preloader-frame">
-        <div
-          class="mil-preloader-content"
-          style="transform: scale(0.6) translateY(200px); opacity: 0"
+    <!-- hero -->
+    <main class="kh-hero" id="top">
+      <div class="kh-hero__bg" aria-hidden="true"></div>
+      <div class="kh-hero__overlay" aria-hidden="true"></div>
+
+      <header class="kh-topbar">
+        <a class="kh-logo" href="home.html" aria-label="Home"
+          >A. Khaled Mohebi</a
         >
-          <div class="mil-preloader">
-            <div class="mil-circ-1"></div>
-            <div class="mil-circ-2"></div>
-            <div class="mil-circ-3"></div>
-            <div class="mil-circ-4"></div>
-          </div>
-          <!-- <div class="mil-upper">Loading</div> -->
+        <nav class="kh-nav" aria-label="Primary">
+          <a href="home.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="story.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button
+          class="kh-menu-btn"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="khMobileMenu"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="5" cy="12" r="1.8"></circle>
+            <circle cx="12" cy="12" r="1.8"></circle>
+            <circle cx="19" cy="12" r="1.8"></circle>
+          </svg>
+        </button>
+        <div class="kh-mobile-menu" id="khMobileMenu" aria-hidden="true">
+          <a href="home.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="story.html">About</a>
+          <a href="contact.html">Contact</a>
         </div>
+      </header>
+
+      <div class="kh-hero__content">
+        <p class="kh-hero__role">Product Designer</p>
       </div>
-      <!-- preloader end -->
 
-      <div class="mil-frame">
-        <!-- top bar -->
-        <div class="mil-top-panel">
-          <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-          <a href="index.html" class="mil-logo"
-            ><span data-i18n="nav.logoInitial">K</span></a
+      <div class="kh-hero__actions">
+        <div class="kh-cta-buttons">
+          <a class="kh-btn kh-btn--primary" href="portfolio.html"
+            >My Portfolio</a
           >
-
-          <div class="mil-navigation">
-            <nav id="swupMenu" class="mil-menu-transition">
-              <ul>
-                <li class="mil-has-children mil-active">
-                  <a data-i18n="nav.home" href="index.html">Home</a>
-                </li>
-                <li class="mil-has-children">
-                  <a data-i18n="nav.story" href="story.html">My Story</a>
-                </li>
-                <li class="mil-has-children">
-                  <a data-i18n="nav.portfolio" href="portfolio.html"
-                    >Portfolio</a
-                  >
-                </li>
-                <li class="mil-has-children">
-                  <a data-i18n="nav.services" href="service.html">Service</a>
-                </li>
-                <li class="mil-has-children">
-                  <a
-                    data-i18n="nav.contact"
-                    href="contact.html"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="mil-top-panel-btns">
-            <a
-              href="#"
-              class="mil-logo"
-              id="langToggle"
-              data-lang-toggle="true"
-              aria-label="Switch language"
-              data-i18n-attr="aria-label:nav.toggleLabel"
-              ><span
-                id="langLabel"
-                data-lang-label="true"
-                data-i18n="nav.lanText"
-              ></span
-            ></a>
-            <!-- <button
-              type="button"
-              class="mil-contact-btn"
-              id="langToggle"
-              aria-label="Switch language"
-              data-i18n-attr="aria-label:nav.toggleLabel"
-            >
-              <picture class="mil-contact-icon">
-                <source
-                  srcset="/img/icons/de-en-bl.svg"
-                  media="(max-width: 1200px)"
-                />
-                <img src="/img/icons/de-en.svg" alt="Language toggle" />
-              </picture>
-              <span id="langLabel" class="mil-lang-sr-only">EN</span>
-            </button> -->
-
-            <div class="mil-menu-btn">
-              <span></span>
-            </div>
-          </div>
+          <a class="kh-btn kh-btn--ghost" href="story.html">About Me</a>
         </div>
-        <!-- top bar end -->
-
-        <!-- left bar -->
-        <div class="mil-left-panel">
-          <div
-            class="mil-page-name mil-upper mil-dark"
-            data-i18n="sidebar.name"
-          >
-            Abdul Khaled Mohebi
-          </div>
-
-          <ul class="mil-social-icons">
-            <li>
-              <a
-                href="https://www.linkedin.com/in/khaled-jawan/"
-                target="_blank"
-                class="social-icon"
-              >
-                <i class="fab fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://dribbble.com/KhaledJawan"
-                target="_blank"
-                class="social-icon"
-              >
-                <i class="fab fa-dribbble"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.behance.net/KhaledJawan"
-                target="_blank"
-                class="social-icon"
-              >
-                <i class="fab fa-behance"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://discord.com/users/khaledjawan"
-                target="_blank"
-                class="social-icon"
-              >
-                <i class="fab fa-discord"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <!-- left bar end -->
-
-        <!-- back to top -->
-        <div class="mil-back-to-top">
-          <a href="#top" class="mil-link mil-btt-icon">
-            <span data-i18n="nav.backToTop">Back to top</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-arrow-right"
-            >
+        <a
+          class="kh-chat-bar"
+          href="#chat"
+          aria-label="Open AI chat"
+          data-open-chat="true"
+        >
+          <span>Talk to me now</span>
+          <span class="kh-chat-bar__send" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
               <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+              <polyline points="13 6 19 12 13 18"></polyline>
             </svg>
-          </a>
-        </div>
-        <!-- back to top end -->
+          </span>
+        </a>
       </div>
 
-      <!-- content -->
-      <div class="mil-content">
-        <div class="mil-scroll-wrapper transition-fade" id="swupMain">
-          <div class="mil-container">
-            <!-- banner -->
-            <section class="mil-side-banner mil-center">
-              <div class="mil-banner-top mil-up"></div>
-              <div class="mil-banner-title">
-                <div
-                  class="mil-upper mil-dark mil-up mil-mb-30"
-                  data-i18n="hero.greeting"
-                >
-                  Hi! My name is
-                </div>
-                <h1 class="mil-up mil-mb-30" data-i18n="hero.name">
-                  Khaled<br />Jawan
-                </h1>
-                <p class="mil-upper mil-dark mil-up" data-i18n="hero.role">
-                  UI/UX Designer
-                </p>
-              </div>
-              <div class="mil-up mil-oval-frame">
-                <div class="mil-circle-text">
-                  <svg
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 300 300"
-                    enable-background="new 0 0 300 300"
-                    xml:space="preserve"
-                    class="mil-ct-svg mil-rotate"
-                    data-value="360"
-                  >
-                    <defs>
-                      <path
-                        id="circlePath"
-                        d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                      />
-                    </defs>
-                    <circle cx="150" cy="100" r="75" fill="none" />
-                    <g>
-                      <use xlink:href="#circlePath" fill="none" />
-                      <text style="letter-spacing: 6.5px">
-                        <!-- circle text -->
-                        <textPath
-                          xlink:href="#circlePath"
-                          data-i18n="hero.scrollText"
-                        >
-                          Scroll down - Scroll down -
-                        </textPath>
-                      </text>
-                    </g>
-                  </svg>
-                  <a href="#about" class="mil-button">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-arrow-down"
-                    >
-                      <line x1="12" y1="5" x2="12" y2="19"></line>
-                      <polyline points="19 12 12 19 5 12"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </section>
-            <!-- banner end -->
-
-            <!-- about -->
-            <section id="about" class="mil-p-0-90">
-              <div class="mil-oval-frame-2 mil-mb-90">
-                <img src="img/person/avatar.jpg" alt="avatar" />
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <div class="mil-center">
-                    <h2 class="mil-up mil-mb-30" data-i18n="about.title">
-                      Hi! My name is Khaled, <br />i’m UI/UX Designer based in
-                      Germany
-                    </h2>
-                    <div class="mil-quote mil-up mil-mb-30">
-                      <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p class="mil-up mil-mb-30" data-i18n="about.description">
-                      I am a passionate and dedicated UI/UX designer with a
-                      strong focus on creating exceptional user experiences. I
-                      thrive on transforming complex ideas into intuitive and
-                      visually appealing designs. With a keen eye for detail and
-                      a user-centered approach, I strive to deliver impactful
-                      solutions that engage and delight users. Let's collaborate
-                      to bring your digital products to life!
-                    </p>
-                    <img
-                      src="img/person/mysign.png"
-                      alt="signature"
-                      class="mil-up mil-sign"
-                    />
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- about end -->
-
-            <div class="mil-section-title mil-up">
-              <div class="mil-divider"></div>
-              <h3 data-i18n="services.sectionTitle">Services</h3>
-            </div>
-
-            <!-- services -->
-            <section class="mil-p-90-30">
-              <div class="row justify-content-between align-items-center">
-                <div class="col-lg-4">
-                  <div class="mil-icon-box mil-center mil-mb-60">
-                    <div class="mil-service-icon mil-up">
-                      <img src="img/icons/1.svg" alt="icon" class="mil-mb-30" />
-                    </div>
-                    <h5
-                      class="mil-up mil-mb-30"
-                      data-i18n="services.uiux.title"
-                    >
-                      UI/UX Design
-                    </h5>
-                    <p
-                      class="mil-up mil-mb-30"
-                      data-i18n="services.uiux.description"
-                    >
-                      Elevate your online presence with captivating user
-                      interfaces and seamless.
-                    </p>
-                    <div class="mil-up">
-                      <a
-                        href="service.html#service-what-is"
-                        class="mil-link mil-icon-link"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-arrow-right"
-                        >
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="mil-icon-box mil-center mil-mb-60">
-                    <div class="mil-service-icon mil-up">
-                      <img src="img/icons/2.svg" alt="icon" class="mil-mb-30" />
-                    </div>
-                    <h5
-                      class="mil-up mil-mb-30"
-                      data-i18n="services.logo.title"
-                    >
-                      Logo Design
-                    </h5>
-                    <p
-                      class="mil-up mil-mb-30"
-                      data-i18n="services.logo.description"
-                    >
-                      Establish a strong and cohesive brand identity that
-                      resonates with your audience.
-                    </p>
-                    <div class="mil-up">
-                      <a
-                        href="service.html#service-logo-design"
-                        class="mil-link mil-icon-link"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-arrow-right"
-                        >
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="mil-icon-box mil-center mil-mb-60">
-                    <div class="mil-service-icon mil-up">
-                      <img src="img/icons/3.svg" alt="icon" class="mil-mb-30" />
-                    </div>
-                    <h5
-                      class="mil-up mil-mb-30"
-                      data-i18n="services.branding.title"
-                    >
-                      Branding
-                    </h5>
-                    <p
-                      class="mil-up mil-mb-30"
-                      data-i18n="services.branding.description"
-                    >
-                      All of which have a singular goal: to build environments
-                      where our clients thrive.
-                    </p>
-                    <div class="mil-up">
-                      <a
-                        href="service.html#service-branding"
-                        class="mil-link mil-icon-link"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-arrow-right"
-                        >
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- services end -->
-
-            <div class="mil-section-title mil-up">
-              <div class="mil-divider"></div>
-              <h3 data-i18n="skills.sectionTitle">Hard Skills</h3>
-            </div>
-
-            <!-- hard skills -->
-            <section class="mil-p-90-60">
-              <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6">
-                  <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30" data-i18n="skills.figma">
-                      Figma
-                    </h6>
-                    <div class="mil-line-progress mil-up">
-                      <div class="mil-bar" data-value=""></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30" data-i18n="skills.adobeXd">
-                      Adobe XD
-                    </h6>
-                    <div class="mil-line-progress mil-up">
-                      <div class="mil-bar" data-value=""></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30" data-i18n="skills.sketch">
-                      Sketch
-                    </h6>
-                    <div class="mil-line-progress mil-up">
-                      <div class="mil-bar" data-value=""></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="mil-lang-skills-item mil-mb-30">
-                    <h6 class="mil-up mil-mb-30" data-i18n="skills.adobeSuite">
-                      Photoshop, Illustrator
-                    </h6>
-                    <div class="mil-line-progress mil-up">
-                      <div class="mil-bar" data-value=""></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="mil-lang-skills-item mil-mb-30">
-                    <h6
-                      class="mil-up mil-mb-30"
-                      data-i18n="skills.programming.label"
-                    >
-                      Programming skills:
-                    </h6>
-                    <div class="mil-line-progress mil-up">
-                      <div class="mil-bar" data-value=""></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="mil-lang-skills-item mil-mb-30">
-                    <h6
-                      class="mil-up mil-mb-30"
-                      data-i18n="skills.programming.tools"
-                    >
-                      Python, Java, HTML, CSS, JavaScript
-                    </h6>
-                    <div class="mil-line-progress mil-up">
-                      <div class="mil-bar" data-value=""></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- hard skills end -->
-
-            <div class="mil-section-title mil-up">
-              <div class="mil-divider"></div>
-              <h3 data-i18n="languages.sectionTitle">Language Skills</h3>
-            </div>
-
-            <!-- language -->
-            <section class="mil-lang-skills mil-p-90-60">
-              <div class="row justify-content-between align-items-center">
-                <div class="col-6 col-lg-3">
-                  <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
-                    <div class="mil-circular-progress" data-value="90%">
-                      <div class="mil-counter-frame mil-upper mil-dark">
-                        <span
-                          class="mil-counter"
-                          data-number=""
-                          data-i18n="languages.german.level"
-                        >
-                          C1
-                        </span>
-                      </div>
-                    </div>
-                    <h6 class="mil-up" data-i18n="languages.german.label">
-                      German
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
-                    <div class="mil-circular-progress" data-value="90%">
-                      <div class="mil-counter-frame mil-upper mil-dark">
-                        <span
-                          class="mil-counter"
-                          data-number=""
-                          data-i18n="languages.english.level"
-                        >
-                          C1
-                        </span>
-                      </div>
-                    </div>
-                    <h6 class="mil-up" data-i18n="languages.english.label">
-                      English
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
-                    <div class="mil-circular-progress" data-value="25%">
-                      <div class="mil-counter-frame mil-upper mil-dark">
-                        <span
-                          class="mil-counter"
-                          data-number=""
-                          data-i18n="languages.french.level"
-                        >
-                          A2
-                        </span>
-                      </div>
-                    </div>
-                    <h6 class="mil-up" data-i18n="languages.french.label">
-                      French
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="mil-lang-skills-item mil-center mil-up mil-mb-30">
-                    <div class="mil-circular-progress" data-value="100%">
-                      <div class="mil-counter-frame mil-upper mil-dark">
-                        <span
-                          class="mil-counter"
-                          data-number=""
-                          data-i18n="languages.persian.level"
-                        >
-                          Native
-                        </span>
-                      </div>
-                    </div>
-                    <h6 class="mil-up" data-i18n="languages.persian.label">
-                      Persian
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- language end -->
-
-            <div class="mil-section-title mil-up">
-              <div class="mil-divider"></div>
-              <h3 data-i18n="reviews.sectionTitle">Reviews</h3>
-            </div>
-
-            <!-- revievs -->
-            <section class="mil-p-90-90">
-              <div class="row justify-content-center mil-reviews-slider-frame">
-                <div class="col-lg-8">
-                  <div class="swiper-container mil-reviews-slider mil-mb-30">
-                    <div class="swiper-wrapper">
-                      <!-- <div class="swiper-slide">
-                        <div
-                          class="mil-review mil-center"
-                          data-swiper-parallax-opacity="0"
-                          data-swiper-parallax="-90"
-                          data-swiper-parallax-scale=".8"
-                        >
-                          <div class="mil-review-top">
-                            <img
-                              src="img/customers/natalie.jpg"
-                              alt="customer"
-                              class="mil-avatar mil-up"
-                            />
-                            <div class="mil-name">
-                              <h4
-                                class="mil-up mil-mb-5"
-                                data-i18n="reviews.natalie.name"
-                              >
-                                Natalie Luckner
-                              </h4>
-                              <p
-                                class="mil-upper mil-up"
-                                data-i18n="reviews.natalie.role"
-                              >
-                                Koordination Bundesfreiwilligendienst in
-                                Technisches Hilfswerk
-                              </p>
-                            </div>
-                          </div>
-                          <p class="mil-up" data-i18n="reviews.natalie.quote">
-                            Working with Khaled Jawan as our UI designer was an
-                            absolute pleasure. Her attention to detail and
-                            creative approach brought our vision to life. The
-                            user interface she designed exceeded our
-                            expectations, and we received positive feedback from
-                            our clients. Highly recommended!
-                          </p>
-                        </div>
-                      </div> -->
-                      <div class="swiper-slide">
-                        <div
-                          class="mil-review mil-center"
-                          data-swiper-parallax-opacity="0"
-                          data-swiper-parallax="-90"
-                          data-swiper-parallax-scale=".8"
-                        >
-                          <div class="mil-review-top">
-                            <img
-                              src="img/customers/jawad.jpg"
-                              alt="customer"
-                              class="mil-avatar mil-up"
-                            />
-                            <div class="mil-name">
-                              <h4
-                                class="mil-up mil-mb-5"
-                                data-i18n="reviews.said.name"
-                              >
-                                Said Jawad Saidi
-                              </h4>
-                              <p
-                                class="mil-upper mil-up"
-                                data-i18n="reviews.said.role"
-                              >
-                                Senior Engineer, Huawei
-                              </p>
-                            </div>
-                          </div>
-                          <p class="mil-up" data-i18n="reviews.said.quote">
-                            Working with Khaled Jawan as our UI designer was an
-                            absolute pleasure. Her attention to detail and
-                            creative approach brought our vision to life. The
-                            user interface she designed exceeded our
-                            expectations, and we received positive feedback from
-                            our clients. Highly recommended!
-                          </p>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div
-                          class="mil-review mil-center"
-                          data-swiper-parallax-opacity="0"
-                          data-swiper-parallax="-90"
-                          data-swiper-parallax-scale=".8"
-                        >
-                          <div class="mil-review-top">
-                            <img
-                              src="img/customers/saif.jpeg"
-                              alt="customer"
-                              class="mil-avatar mil-up"
-                            />
-                            <div class="mil-name">
-                              <h4
-                                class="mil-up mil-mb-5"
-                                data-i18n="reviews.saif.name"
-                              >
-                                Saifuddin Sepehr
-                              </h4>
-                              <p
-                                class="mil-upper mil-up"
-                                data-i18n="reviews.saif.role"
-                              >
-                                CEO, Microcis
-                              </p>
-                            </div>
-                          </div>
-                          <p class="mil-up" data-i18n="reviews.saif.quote">
-                            I had the opportunity to collaborate with Khaled,
-                            and I must say she is incredibly talented. Her
-                            ability to understand our brand and translate it
-                            into a interface was impressive. Khaled's designs
-                            were intuitive, and enhanced the overall user
-                            experience. I look forward to working with her
-                            again!
-                          </p>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div
-                          class="mil-review mil-center"
-                          data-swiper-parallax-opacity="0"
-                          data-swiper-parallax="-90"
-                          data-swiper-parallax-scale=".8"
-                        >
-                          <div class="mil-review-top">
-                            <img
-                              src="img/customers/sanzar.jpg"
-                              alt="customer"
-                              class="mil-avatar mil-up"
-                            />
-                            <div class="mil-name">
-                              <h4
-                                class="mil-up mil-mb-5"
-                                data-i18n="reviews.sanzar.name"
-                              >
-                                Sanzar Kakar
-                              </h4>
-                              <p
-                                class="mil-upper mil-up"
-                                data-i18n="reviews.sanzar.role"
-                              >
-                                Chairman, Moore Afghanistan
-                              </p>
-                            </div>
-                          </div>
-                          <p class="mil-up" data-i18n="reviews.sanzar.quote">
-                            Khaled Jawan is an exceptional UI designer. She has
-                            a keen eye for aesthetics and understands how to
-                            create interfaces. Khaled's designs greatly improved
-                            the usability of our application, and we couldn't be
-                            happier with the results. Highly skilled and
-                            reliable!
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mil-slider-nav mil-up">
-                  <div class="mil-reviews-prev">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-arrow-right"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </div>
-                  <div class="mil-reviews-next">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-arrow-right"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="swiper-reviews-pagination mil-up"></div>
-              </div>
-            </section>
-            <!-- revievs end -->
-
-            <!-- <div class="mil-section-title mil-up">
-              <div class="mil-divider"></div>
-              <h3 data-i18n="blog.sectionTitle">Latest from blog</h3>
-            </div> -->
-
-            <!-- blog -->
-            <!-- <section class="mil-p-90-30">
-              <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6">
-                  <a href="blog.html" class="mil-blog-card mil-mb-60">
-                    <div class="mil-cover mil-up">
-                      <img src="img/blog/1.jpg" alt="cover" />
-                      <div class="mil-link mil-icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-arrow-right"
-                        >
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="mil-descr">
-                      <h4 class="mil-up mil-mb-30" data-i18n="blog.post1.title">
-                        How to Become a Graphic Designer in 10 Simple Steps
-                      </h4>
-                      <p class="mil-up" data-i18n="blog.post1.excerpt">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Eius sequi commodi dignissimos.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-6">
-                  <a href="blog.html" class="mil-blog-card mil-mb-60">
-                    <div class="mil-cover mil-up">
-                      <img src="img/blog/2.jpg" alt="cover" />
-                      <div class="mil-link mil-icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-arrow-right"
-                        >
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="mil-descr">
-                      <h4 class="mil-up mil-mb-30" data-i18n="blog.post2.title">
-                        16 Best Graphic Design Online and Offline Courses
-                      </h4>
-                      <p class="mil-up" data-i18n="blog.post2.excerpt">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Eius sequi commodi dignissimos.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </section> -->
-            <!-- blog end -->
-
-            <div class="mil-divider mil-up mil-mb-90"></div>
-
-            <!-- call to action -->
-            <div class="mil-p-0-90">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <div class="mil-center">
-                    <h2 class="mil-up mil-mb-30" data-i18n="cta.title">
-                      Ready to bring your ideas to life? I'm here to help
-                    </h2>
-                    <div class="mil-up">
-                      <a
-                        id="openChatButton"
-                        href="contact.html"
-                        class="mil-btn mil-sm-btn"
-                        data-i18n="cta.button"
-                      >
-                        Contact me
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- call to action end -->
-
-            <!-- footer -->
-            <footer class="mil-fw">
-              <p class="mil-light-soft" data-i18n="footer.copyright">
-                © 2025. Khaled. All rights reserved.
-              </p>
-              <!-- <p class="mil-light-soft">
-                Author: &nbsp;<a
-                  href="https://themeforest.net/user/millerdigitaldesign/portfolio"
-                  target="_blank"
-                  >Khaled Jawan</a
-                >
-              </p> -->
-            </footer>
-            <!-- footer end -->
-          </div>
-        </div>
-
-        <div class="mil-right-banner" id="scene">
-          <!-- scrollbar -->
-          <div class="mil-progress-track">
-            <div class="mil-progress"></div>
-          </div>
-          <!-- scrollbar end -->
-          <div class="mil-banner-wrapper" data-depth="1">
-            <div id="swupBg" class="mil-banner-frame">
-              <img
-                src="img/person/bg-1.jpg"
-                alt="background"
-                class="mil-banner-bg mil-blur"
-              />
-            </div>
-          </div>
-          <div class="mil-banner-wrapper" data-depth="0.2">
-            <div id="swupPerson" class="mil-banner-frame">
-              <div class="lottie-box" data-path="img/lottie/me.json"></div>
-              <!-- <img
-                src="img/person/2.jpg"
-                alt="person"
-                class="mil-banner-person"
-              /> -->
-            </div>
-          </div>
-          <div class="mil-flying-skills" data-depth="0.1">
-            <div id="swupSkills" class="mil-skills-frame">
-              <!-- <div class="mil-item" style="top: 30%; left: 10%">
-                <img src="img/logos/1.jpg" alt="logo" />
-              </div>
-              <div class="mil-item" style="bottom: 15%; left: 20%">
-                <img src="img/logos/2.jpg" alt="logo" />
-              </div>
-              <div class="mil-item" style="bottom: 45%; right: 15%">
-                <img src="img/logos/3.jpg" alt="logo" />
-              </div> -->
-              <div class="mil-el mil-addition-el-1">+</div>
-              <div class="mil-el mil-addition-el-2">+</div>
-              <div class="mil-el mil-addition-el-3"></div>
-              <div class="mil-el mil-addition-el-4"></div>
-            </div>
-          </div>
-        </div>
+      <div class="kh-social-stack" aria-label="Social links">
+        <a
+          href="https://www.linkedin.com/in/khaled-jawan/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://www.behance.net/KhaledJawan"
+          target="_blank"
+          rel="noopener"
+          aria-label="Behance"
+        >
+          <i class="fab fa-behance" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://dribbble.com/KhaledJawan"
+          target="_blank"
+          rel="noopener"
+          aria-label="Dribbble"
+        >
+          <i class="fab fa-dribbble" aria-hidden="true"></i>
+        </a>
+        <a href="#chat" aria-label="Chat" data-open-chat="true">
+          <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        </a>
       </div>
-      <!-- content -->
-    </div>
-    <!-- wrapper end -->
+    </main>
+    <!-- hero end -->
 
-    <!-- jQuery js -->
-    <script src="js/plugins/jquery.min.js?v=20240905"></script>
-    <!-- swup js -->
-    <script src="js/plugins/swup.min.js?v=20240905"></script>
-    <!-- swup body class plugin js -->
-    <script src="js/plugins/SwupBodyClassPlugin.min.js?v=20240905"></script>
-    <!-- swiper js -->
-    <script src="js/plugins/swiper.min.js?v=20240905"></script>
-    <!-- gsap js -->
-    <script src="js/plugins/gsap.min.js?v=20240905"></script>
-    <!-- scroll smoother -->
-    <script src="js/plugins/smooth-scroll.js?v=20240905"></script>
-    <!-- scroll trigger js -->
-    <script src="js/plugins/ScrollTrigger.min.js?v=20240905"></script>
-    <!-- parallax js -->
-    <script src="js/plugins/parallax.js?v=20240905"></script>
-    <!-- i18n js -->
-    <script src="js/i18n.js?v=20240905"></script>
-    <!-- Khaled js -->
-    <script src="js/main.js?v=20240905"></script>
-    <!-- chat widget js -->
+    <!-- chat anchor -->
+    <section class="kh-chat-section" id="chat">
+      <div class="kh-chat-section__inner">
+        <h2>Talk to A. Khaled Mohebi</h2>
+        <p>
+          Want a quick design review or project estimate? Drop your brief and I
+          will get back to you shortly.
+        </p>
+        <a class="kh-btn kh-btn--primary" href="contact.html">Contact Me</a>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        var menuButton = document.querySelector(".kh-menu-btn");
+        var menu = document.getElementById("khMobileMenu");
+
+        if (!menuButton || !menu) {
+          return;
+        }
+
+        var toggleMenu = function () {
+          var isOpen = menu.classList.toggle("is-open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menu.setAttribute("aria-hidden", String(!isOpen));
+        };
+
+        var closeMenu = function () {
+          menu.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menu.setAttribute("aria-hidden", "true");
+        };
+
+        menuButton.addEventListener("click", function (event) {
+          event.stopPropagation();
+          toggleMenu();
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
     <script src="js/ai-chat.js?v=20251217"></script>
+    <script>
+      (function () {
+        var chatTriggers = document.querySelectorAll("[data-open-chat]");
+        if (!chatTriggers.length) {
+          return;
+        }
 
-    <a
-      href="#"
-      class="mil-lang-floating"
-      data-lang-toggle="true"
-      aria-label="Switch language"
-      data-i18n-attr="aria-label:nav.toggleLabel"
-    >
-      <span class="mil-lang-floating__label" data-lang-label="true">EN</span>
-    </a>
+        var openChat = function (event) {
+          event.preventDefault();
+          var chatButton = document.getElementById("chatBtn");
+          if (chatButton) {
+            chatButton.click();
+            return;
+          }
+          var attempts = 0;
+          var timer = setInterval(function () {
+            attempts += 1;
+            var delayedButton = document.getElementById("chatBtn");
+            if (delayedButton) {
+              delayedButton.click();
+              clearInterval(timer);
+            }
+            if (attempts > 10) {
+              clearInterval(timer);
+            }
+          }, 200);
+        };
+
+        chatTriggers.forEach(function (trigger) {
+          trigger.addEventListener("click", openChat);
+        });
+      })();
+    </script>
   </body>
 </html>
